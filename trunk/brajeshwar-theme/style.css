@@ -1,0 +1,528 @@
+/*
+Theme Name: Brajeshwar
+Theme URI: http://theme.brajeshwar.com/
+Version: v7.1.1
+Author: Brajeshwar
+Author URI: http://www.brajeshwar.com/
+Description: A minimal, simple, crisp, clear and light 3 column design. This plugin independent theme highlights the excerpt of the latest article on the home page. The fonts styles have been updated to be compatible with Microsoft Windows Vista.
+
+The CSS, XHTML and design is released under GPL:
+http://www.opensource.org/licenses/gpl-license.php
+*/
+
+/* 
+global settings
+----------------------------------------------------------- */
+* { margin: 0; padding: 0; }
+
+body { 
+background: #fff; 
+font: 100%/1.5em Candara, "Trebuchet MS", Trebuchet, sans-serif;
+color: #666;
+text-align: center; 
+}
+
+/* links */
+
+a:link {
+text-decoration: none;
+color: #069;
+}
+a:visited {
+text-decoration: none;
+color: #069;
+}
+a:hover {
+background: #e5e5e5;
+border-bottom: 1px dotted #333;
+color: #036;
+}
+a:active {
+text-decoration: none;
+color: #069;
+} 
+a img {
+background: none;
+border: 0 none;
+margin-bottom: -10px; 
+vertical-align: sub;
+}
+
+/* hn */
+
+h1, h2, h3, h4, h5, h6 { 
+font-weight: normal; 
+color: #515151;
+margin: 10px 0;
+}
+h1 {}
+h1 a { color: #515151;}
+h1 a:hover { 
+background: none;
+border-bottom: none;
+color: #069;
+}
+h2 {  font-size: 1.1em; }
+h3 { font-size: 1em; }
+h4 { font-size: 0.9em; }
+h5 { font-size: 0.8em; }
+h6 { font-size: 0.7em; }
+
+/* misc */
+
+abbr, 
+acronym {
+font-style: normal; 
+border-bottom: 1px dotted #666; 
+cursor: help;
+}
+code, pre { 
+font-family: Consolas, "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+}
+pre {
+border: 1px solid #888;
+background: #fafafa;
+padding: 4px;
+overflow: auto;
+width: 95%;
+max-height: 500px;
+margin: 10px auto;
+font: 1em/1.5em Consolas, "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+}
+
+/* defination lists */
+
+dl { 
+margin: 20px 0; 
+}
+dt {
+font-size: 0.9em;
+text-transform: uppercase;
+}
+dd {
+margin: 0 0 20px;
+}
+
+/* list styles */
+
+ul {
+margin: 10px 0; 
+} 
+ul li {
+height: 1%;
+list-style-type: none;
+margin: 0 0 5px;
+padding: 0 0 0 15px;
+background: url(i/bullet.gif) no-repeat 0 6px;
+line-height: 18px;
+}
+ol {
+margin: 10px 0 10px 25px; 
+}
+ol li {
+margin: 0 0 5px 0; 
+}
+
+/* blockquote */
+
+blockquote {
+margin: 10px 0;
+padding: 5px 10px;
+border-top: 1px solid #ddd;
+border-bottom: 1px solid #ddd;
+font: 0.9em/1.5em Constantia, "Palatino Linotype", Palatino, Georgia, serif;
+color: #666;
+}
+
+/* image styles */
+
+img.left {
+float: left;
+margin: 0 15px 10px 0;
+}
+img.right {
+float: right;
+margin: 0 0 10px 15px;
+}
+img.centered {
+display: block;
+margin: 10px auto;
+}
+img.border {
+padding: 2px;
+border: 1px solid #999;
+}
+
+/* layout
+------------------------------------------------------ */
+
+#container {
+margin: 0 auto; 
+width: 760px;
+font-size: 0.75em;
+text-align: left;
+}
+#wrap {
+height: 1%;
+margin: 4px 0;
+background: url(i/wrap.gif) repeat-y;
+}
+#col-left {
+float: left;
+width: 150px;
+padding: 20px 0;
+text-align: right;
+}
+#col-main {
+float: left;
+width: 400px;
+}
+#col-right {
+float: left;
+width: 210px;
+padding: 20px 0;
+}
+
+/* header
+------------------------------------------------------ */
+
+#header {
+margin: 35px 0 0 20px;
+border-bottom: 1px solid #e5e5e5;
+}
+#header h1, #header h1 a {
+font: normal normal bold 1.7em/normal Corbel, Verdana, "Bitstream Vera Sans", sans-serif;
+text-transform: uppercase;
+margin: 0;
+padding: 0;
+border: 0 none;
+text-decoration: none;
+color: #666;
+}
+#header h1 a:hover {
+border: 0 none;
+text-decoration: none;
+color: #000;
+}
+body#home #header {
+border-bottom: none;
+}
+
+/* main navigation */
+
+#nav {
+margin: 20px 0;
+padding: 0 0 20px 120px;
+}
+#nav li {
+float: left;
+display: block;
+list-style-type: none;
+margin: 0; 
+padding: 0;
+background-image: none;
+}
+#nav a:link, #nav a:visited {
+float: left;
+display: block;
+padding: 0 10px 8px 10px;
+font-size: 1.2em;
+font-weight: bold;
+color: #515151;
+text-transform: uppercase;
+text-decoration: none;
+}
+#nav li.current_page_item, #nav a:hover {
+background: url(i/tab.gif) no-repeat 50% 100%;
+border-bottom: none;
+color: #069;
+}
+#nav li.current_page_item a, #nav li.current_page_item a:visited {
+color: #069;
+}
+
+/* latest post
+------------------------------------------------------ */
+
+#latest {
+height: 1%;
+border-bottom: 1px solid #eee;
+}
+body#home #latest {
+border-top: 1px solid #e1e1e1;
+}
+#latest-inner {
+height: 1%;
+margin: 5px 0;
+background: url(i/latest.gif) repeat-y;
+}
+
+/* post */
+
+#post-latest {
+float: left;
+width: 550px;
+font-size: 1.1em;
+color: #333;
+}
+#post-latest h3 {
+margin: 0;
+padding: 20px 0 0 20px;
+}
+#post-latest h2 {
+margin: 20px 20px 0;
+font: bold 1.1em Corbel, Verdana, "Bitstream Vera Sans", sans-serif;
+}
+#post-latest p.post-meta {
+margin: 0 20px;
+font-size: 0.8em;
+color: #666;
+}
+#post-latest .post-body {
+padding: 10px 20px 20px;
+}
+
+/* about */
+
+#sec-about {
+float: left;
+width: 210px;
+padding: 0 0 20px;
+background: #F3F8F8;
+font-size: 0.9em;
+line-height: 1.6em;
+}
+#sec-about p {
+margin: 20px;
+}
+#sec-about h3 {
+margin: 0;
+padding: 20px 0 0 20px;
+font-size: 1.1em;
+}
+
+/* main column
+------------------------------------------------------ */
+
+/* post */
+
+#col-main h3.sec-title {
+padding: 20px 15px 10px;
+text-transform: uppercase;
+letter-spacing: 0.2em;
+}
+div.post {
+margin: 0 15px 20px;
+padding: 0 0 40px;
+background: url(i/3os.gif) no-repeat 50% 100%;
+}
+div.post-body {}
+
+div.post-body p {
+	margin: 0.8em 0;
+	line-height: 1.5em;
+}
+
+div.post-body img {
+	background: #fff;
+	border: 1px solid #999;
+	float: left;
+	margin: 5px 10px 0 0;
+	padding: 2px;
+}
+/* over-ride the above image style for wp-smiley */
+div.post-body img.wp-smiley {
+float: none;
+background: none;
+border: 0 none;
+margin: 0;
+padding: 0;
+}
+
+h2.post-title {
+margin: 0;
+font-weight: bold;
+}
+p.post-meta {
+margin: 0;
+font-size: 0.85em;
+color: #999;
+text-transform: uppercase;
+}
+body#archives p.post-meta-ind {
+margin: 10px 0 0;
+font-size: 0.85em;
+}
+span.meta-name {
+display: block;
+float: left;
+width: 120px;
+font-size: 1.1em;
+text-transform: uppercase;
+}
+span.meta-detail {
+font-size: 1.1em;
+text-transform: none;
+}
+p.more {
+margin: 20px 0 0;
+padding: 0;
+line-height: 18px;
+}
+#col-main a:hover {
+border-bottom: 1px dotted #666;
+background: #e0e0e0;
+text-color: #333;
+}
+
+/* prev-next navigation */
+
+div.content-navigate {
+padding: 10px 15px 20px;
+}
+span.alignright {
+float: right;
+}
+span.alignleft {
+float: left;
+}
+
+/* comments */
+
+#comments {
+padding: 0 15px 40px;
+background: url(i/3os.gif) no-repeat 50% 100%;
+}
+#comments h3 {
+margin: 0;
+padding: 10px 0 0;
+font-weight: bold;
+}
+div.comment {
+height: 1%;
+padding: 10px 0;
+background: url(i/dot.gif) no-repeat 50% 100%;
+}
+div.comment p {
+margin: 5px 0;
+}
+.comment-meta {
+font-size: 0.95em;
+text-transform: uppercase;
+}
+#comments label {
+display: block;
+font-size: 0.9em;
+}
+#comment-author, 
+#comment-email,
+#comment-url,
+#comment-text, 
+#s {
+width: 90%;
+margin: 0 0 10px;
+padding: 2px;
+border: 1px solid #ccc;
+font: 0.95em Corbel, Verdana, "Bitstream Vera Sans", sans-serif;
+}
+#searchsubmit, 
+#comment-submit {
+padding: 2px;
+background: #eee;
+border: 3px double #666;
+border-top-color: #ccc;
+border-left-color: #ccc;
+font-size: 85%;
+color: #333;
+text-transform: uppercase;
+text-align: center;
+letter-spacing: 0.1em;
+}
+
+/* search page
+------------------------------------------------------ */
+
+ul#search-results-list {
+margin: 25px 0 0;
+}
+ul#search-results-list li {
+margin: 0 0 40px;
+padding: 0 0 0 20px;
+background: url(i/dashed.gif) no-repeat 0 6px;
+line-height: 18px;
+}
+ul#search-results-list h2 {
+margin: 0;
+padding: 0;
+}
+
+/* side columns common
+------------------------------------------------------ */
+
+#col-right a:hover, #col-left a:hover {
+background: transparent;
+border-bottom: none;
+}
+#col-right li, #col-left li {
+list-style-type: none;
+margin: 0;
+padding: 0;
+border-bottom: 1px solid #e5e5e5;
+background-image: none;
+line-height: 20px;
+}
+#col-right ul ul, #col-left ul ul {
+margin: 0;
+}
+#col-right li li, #col-left li li {
+border-top: 1px solid #e5e5e5;
+}
+h3.sec-title {
+margin: 0;
+text-transform: uppercase;
+letter-spacing: 0.2em;
+}
+div.left-sec, 
+div.right-sec {
+margin: 0 15px 40px;
+}
+
+/* ---------------------------------------------------
+ads		
+------------------------------------------------------ */
+#ads-home {
+	border-bottom: 1px solid #ccc;
+	text-align: center;
+}
+#ads-articles {}
+
+/* footer
+------------------------------------------------------ */
+
+#footer {
+margin: 4px 0 0;
+padding: 20px 0 20px 165px;
+border-top: 1px solid #ccc;
+font-size: 0.8em;
+}
+
+/* misc
+------------------------------------------------------ */
+
+.clear {
+clear: both;
+height: 0;
+line-height: 0;
+}
+.clearfix:after {
+content: "."; 
+display: block; 
+height: 0; 
+clear: both; 
+visibility: hidden;
+}
+.clearfix {display: inline-table;}
+/* Hides from IE-mac \*/
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}
+/* End hide from IE-mac */
