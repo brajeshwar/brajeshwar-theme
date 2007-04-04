@@ -32,12 +32,12 @@ $websitename = get_bloginfo('name'); #sets the blog's name, according to wordpre
         .$_SERVER['REQUEST_URI']." and received a 404 (page not found) error. ";
 	$failuremess .= "It wasn't their fault, so try fixing it.  
         They came from ".$_SERVER['HTTP_REFERER'];
-	mail($adminemail, "Bad Link To ".$_SERVER['REQUEST_URI'],
-        $failuremess, "From: $websitename <wordpress@$website>"); #email you about problem
+	// uncomment the next link if you the admin to be emailed of 404 errors (it will be too many mails for a high traffic site, I hated that with my site at http://www.brajeshwar.com/)
+	// mail($adminemail, "Bad Link To ".$_SERVER['REQUEST_URI'], $failuremess, "From: $websitename <wordpress@$website>");
 	$casemessage = "An administrator has been emailed about this problem, too.";#set a friendly message
   }
   echo " ".$website.$_SERVER['REQUEST_URI']; ?> 
-and it doesn't exist. <?php echo $casemessage; ?>You can click back and try again or search for what you're looking for:
+	and it doesn't exist. <?php echo $casemessage; ?>You can click back and try again or search for what you're looking for:
   <?php include(TEMPLATEPATH . "/searchform.php"); ?>
 </p>
 </div>

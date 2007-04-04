@@ -1,7 +1,7 @@
 /*
 Theme Name: Brajeshwar
 Theme URI: http://theme.brajeshwar.com/
-Version: v7.1.1
+Version: v7.2.2
 Author: Brajeshwar
 Author URI: http://www.brajeshwar.com/
 Description: A minimal, simple, crisp, clear and light 3 column design. This plugin independent theme highlights the excerpt of the latest article on the home page. The fonts styles have been updated to be compatible with Microsoft Windows Vista.
@@ -10,8 +10,8 @@ The CSS, XHTML and design is released under GPL:
 http://www.opensource.org/licenses/gpl-license.php
 */
 
-/* 
-global settings
+/*
+reset
 ----------------------------------------------------------- */
 * { margin: 0; padding: 0; }
 

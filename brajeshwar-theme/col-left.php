@@ -7,15 +7,13 @@
 
 <div class="left-sec categories">
 <h3 class="sec-title">Categories</h3>
-<ul>
-<?php wp_list_cats('sort_column=name&hide_empty=0'); ?> 
-</ul>
+<ul><?php wp_list_categories('orderby=name&show_count=1&hide_empty=1&title_li'); ?></ul>
 </div>
 
 <div class="left-sec archives">
 <h3 class="sec-title">Archives</h3>
 <!-- monthly archives list -->
-<ul><?php get_archives('monthly','','','<li>','</li>',''); ?></ul>
+<ul><?php wp_get_archives('type=monthly&show_post_count=1'); ?></ul>
 
 <!-- drop down for monthly archives instead of the list, pick your choice (this is particularly useful for old blogs with lots of monthly archives)
 <form id="archiveform" action="">
