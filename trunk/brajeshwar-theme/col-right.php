@@ -24,14 +24,20 @@
 <div class="right-sec meta">
 <h3 class="sec-title">Meta</h3>
 <ul>
-	<li><a class="tr-linkcount" href="http://technorati.com/search/<?php echo $_SERVER['HTTP_HOST'];?>" rel="linkcount">Technorati Links</a></li>
 	<?php wp_register(); ?>
 	<li><?php wp_loginout(); ?></li>
 	<li><a href="http://wordpress.org/" title="Powered by WordPress">WordPress <?php bloginfo('version'); ?></a></li>
-	<li><a href="http://theme.brajeshwar.com/" title="Brajeshwar Wordpress Theme">Brajeshwar</a></li>
+	<li><a href="http://theme.brajeshwar.com/" title="Brajeshwar Wordpress Theme">Brajeshwar Theme</a></li>
 	<!-- TO-DO: put a module to check for the latest theme version visible only to a logged in admin of the site -->
 	<?php wp_meta(); ?>
 </ul>
+</div>
+
+<div class="right-sec etc">
+<h3 class="sec-title">Etcetera</h3>
+<p>
+<script src="http://widgets.technorati.com/t.js" type="text/javascript"></script><a href="http://technorati.com/blogs/<?php bloginfo('url'); ?>?sub=tr_authority_t_ns" class="tr_authority_t_js" style="color:#4261DF">Technorati blog authority</a>
+</p>
 </div>
 
 </div>
