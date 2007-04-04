@@ -1,7 +1,7 @@
 #labels Changelog,Featured
 = Introduction =
 
-We'll list the ChangeLogs of each version released.
+We'll list the Changelog of each version released.
 
 == Details ==
 
