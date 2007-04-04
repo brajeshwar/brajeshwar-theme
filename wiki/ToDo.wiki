@@ -1,0 +1,10 @@
+#labels todo,enhancements,Featured
+= Introduction =
+
+Let us list the things that we have to do for the theme including but not limited to enhancements, optimization etc.
+
+
+= Details =
+
+  * Widget Ready
+  * Google Adsense should be customizable from the Admin Panel (Publisher ID and Channels)
