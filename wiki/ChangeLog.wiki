@@ -27,7 +27,3 @@ v7.1.1 (Released on March 30, 2007)
 v7.2.2 (Released on April 4, 2007)
 
   * Archives Template added
-
-v7.3.0
-
-  * Finally, wigetized the theme (thanks to Alpesh Nakar, the first contributor to this theme). however, the sidebar(s) mark-up is not what I like myself, will try to make it more standard soon. however, it just works for now.
