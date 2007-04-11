@@ -33,13 +33,6 @@
 </ul>
 </div>
 
-<!-- START: sidebar-right Widget -->
-<ul id="sidebar-left">
-<?php if ( function_exists('dynamic_sidebar') && dynamic_sidebar(sidebar-right) ) : else : ?>
-<?php endif; ?>
-</ul>
-<!-- END: sidebar-right Widget -->
-
 <div class="right-sec etc">
 <h3 class="sec-title">Etcetera</h3>
 <p><script src="http://widgets.technorati.com/t.js" type="text/javascript"></script><a href="http://technorati.com/blogs/<?php bloginfo('url'); ?>?sub=tr_authority_t_ns" class="tr_authority_t_js" style="color:#4261DF">Technorati blog authority</a></p>
