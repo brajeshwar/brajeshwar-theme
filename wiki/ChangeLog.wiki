@@ -1,18 +1,7 @@
 #labels Changelog,Featured
-= Introduction =
+v7.0.0 (May, 2006)
 
-We'll list the Changelog of each version released.
-
-== Details ==
-
-v7.2.2 (Released on April 4, 2007)
-
-  * Archives Template added
-
-v7.1.1 (Released on March 30, 2007)
-
-  * 404 bug fixed
-  * font styles compatible with Microsoft Windows Vista
+  * no records as I never thought people will like this theme as much as it is today
 
 v7.1.0 (Released on March 29, 2007)
 
@@ -30,6 +19,15 @@ v7.1.0 (Released on March 29, 2007)
   * added google adsense leaderboard format which you need to edit to match your google adsense unit
   * the highlighted about now gets its value from the Blog Description (Wp Admin > Options) and no need to change in the theme
 
-v7.0.0 (May, 2006)
+v7.1.1 (Released on March 30, 2007)
 
-  * no records as I never thought people will like this theme as much as it is today
+  * 404 bug fixed
+  * font styles compatible with Microsoft Windows Vista
+
+v7.2.2 (Released on April 4, 2007)
+
+  * Archives Template added
+
+v7.3.0
+
+  * Finally, wigetized the theme (thanks to Alpesh Nakar, the first contributor to this theme). however, the sidebar(s) mark-up is not what I like myself, will try to make it more standard soon. however, it just works for now.
