@@ -12,10 +12,12 @@
 
 <div class="left-sec archives">
 <h3 class="sec-title">Archives</h3>
-<!-- monthly archives list -->
-<ul><?php wp_get_archives('type=monthly&show_post_count=1'); ?></ul>
 
-<!-- drop down for monthly archives instead of the list, pick your choice (this is particularly useful for old blogs with lots of monthly archives)
+<!-- monthly archives list 
+<ul><?php wp_get_archives('type=monthly&show_post_count=1'); ?></ul>
+-->
+
+<!-- drop down for monthly archives instead of the list, pick your choice (this is particularly useful for old blogs with lots of monthly archives) -->
 <form id="archiveform" action="">
 <select name="archive_chrono" onchange="window.location =
 (document.forms.archiveform.archive_chrono[document.forms.archiveform.archive_chrono.selectedIndex].value);">
@@ -23,7 +25,13 @@
 <?php get_archives('monthly','','option'); ?>
 </select>
 </form>
--->
+
+<!-- START: sidebar-left Widget -->
+<ul id="sidebar-left">
+<?php if ( function_exists('dynamic_sidebar') && dynamic_sidebar(sidebar-left) ) : else : ?>
+<?php endif; ?>
+</ul>
+<!-- END: sidebar-left Widget -->
 
 </div>
 </div>
