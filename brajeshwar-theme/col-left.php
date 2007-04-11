@@ -25,14 +25,7 @@
 <?php get_archives('monthly','','option'); ?>
 </select>
 </form>
-
-<!-- START: sidebar-left Widget -->
-<ul id="sidebar-left">
-<?php if ( function_exists('dynamic_sidebar') && dynamic_sidebar(sidebar-left) ) : else : ?>
-<?php endif; ?>
-</ul>
-<!-- END: sidebar-left Widget -->
-
 </div>
+
 </div>
 <!-- END #col-left -->
