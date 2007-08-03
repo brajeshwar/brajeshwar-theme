@@ -1,7 +1,7 @@
 /*
 Theme Name: Brajeshwar
 Theme URI: http://theme.brajeshwar.com/
-Version: v7.3.1
+Version: v7.3.2
 Author: Brajeshwar
 Author URI: http://www.brajeshwar.com/
 Description: <p>A minimal, simple, crisp, clear and light 3 column design. This plugin independent theme highlights the excerpt of the latest article on the home page. The fonts styles have been updated to be compatible with Microsoft Windows Vista.</p><p>Details, Preview and latest release downloads are available at the <a href="http://theme.brajeshwar.com/" title="Brajeshwar Theme">theme's Website</a>.</p><p>Visit the <a href="http://www.brajeshwar.com/" title="Brajeshwar">Original Site</a> from where this theme got its inspiration.</p>
@@ -330,6 +330,13 @@ div.post-body img {
 	margin: 5px 10px 0 0;
 	padding: 2px;
 }
+
+div.post-body div.article-skip {
+border-top: 1px solid #f0f0f0;
+margin: 0;
+padding: 0;
+}
+
 /* over-ride the above image style for wp-smiley */
 div.post-body img.wp-smiley {
 float: none;

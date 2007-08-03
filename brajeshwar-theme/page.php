@@ -15,7 +15,7 @@
 <div class="post" id="post-<?php the_ID(); ?>">
 <div class="post-body">
 <?php the_content(); ?>
-<?php edit_post_link('Edit this Page'); ?>
+<?php edit_post_link('&uarr; edit this page'); ?>
 </div>
 </div>
 

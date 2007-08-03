@@ -12,10 +12,9 @@
 <div class="post" id="post-<?php the_ID(); ?>">
 <h2 class="post-title"><?php the_title(); ?></h2>
 <div class="post-body">
-<?php the_content(''); ?>
+<div class="article-skip"><a href="#article">&#x2193; skip to article</a></div>
 
 <!-- START #ads (either remove this or change to your settings) -->
-<div id="ads-articles">
 <script type="text/javascript"><!--
 google_ad_client = "pub-4468481779445136"; // change this to your google adsense details
 google_ad_width = 336;
@@ -29,8 +28,10 @@ google_ad_channel = "1254625883"; // change this to your google adsense channel
 <script type="text/javascript"
   src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </script>
-</div>
 <!-- END #ads -->
+
+<div class="article-skip"><a id="article"></a></div>
+<?php the_content(''); ?>
 
 <p class="post-meta-ind">
 <span class="meta-name">Technorati :</span> <span class="meta-detail"><a class="tr-linkcount" href="http://technorati.com/search/<?php the_permalink(); ?>">View blog reactions</a></span><br />

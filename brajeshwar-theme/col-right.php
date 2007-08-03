@@ -27,8 +27,6 @@
 	<?php wp_register(); ?>
 	<li><?php wp_loginout(); ?></li>
 	<li><a href="http://wordpress.org/" title="Powered by WordPress">WordPress <?php bloginfo('version'); ?></a></li>
-	<li><a href="http://theme.brajeshwar.com/" title="Brajeshwar Wordpress Theme">Brajeshwar Theme</a></li>
-	<!-- TO-DO: put a module to check for the latest theme version visible only to a logged in admin of the site -->
 	<?php wp_meta(); ?>
 </ul>
 </div>
