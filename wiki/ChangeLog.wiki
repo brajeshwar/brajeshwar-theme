@@ -27,3 +27,13 @@ v7.1.1 (Released on March 30, 2007)
 v7.2.2 (Released on April 4, 2007)
 
   * Archives Template added
+
+v7.3.2
+
+  * Remember, Brajeshwar v7.x is best suited with new version of [http://wordpress.org Wordpress] starting v2.1 and above.
+  * Added "Contact" Template compatible with [http://green-beast.com/blog/?page_id=136 Secure and Accessible PHP Contact Form]
+  * Added Installation details including desired plugins in the Project Home page at Google Code.
+  * Added optional Category Drop Down Code.
+  * Fixed a bug with the search template.
+  * Fixed other minor bugs.
+  * Google Adsense location on Article (Single) Page have been re-located to render more clicks and earn more revenue.
