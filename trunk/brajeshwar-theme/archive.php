@@ -38,7 +38,7 @@
 <!-- BEGIN post -->
 <div class="post">
 <h2 class="post-title"><a href="<?php echo get_permalink() ?>" rel="bookmark" title="Permanent Link: <?php the_title(); ?>"><?php the_title(); ?></a></h2>
-<p class="post-meta"><?php the_time('F jS, Y') ?> / <?php the_category(', ') ?> / <?php comments_popup_link('No comments', '1 comment', '% comments','Comments are off for this post'); ?></p>
+<p class="post-meta"><?php the_time('F jS, Y') ?> / <?php the_category(', ') ?> / <?php comments_popup_link('No comments', '1 comment', '% comments','Comments are off for this post'); ?><?php edit_post_link('e &hellip;', ' / ', ''); ?></p>
 <div class="post-body">
 <?php the_content('&#x21E5; Continue reading'); ?>
 </div>

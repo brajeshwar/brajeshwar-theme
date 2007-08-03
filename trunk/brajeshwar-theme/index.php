@@ -9,7 +9,7 @@ $posts = get_posts('numberposts=1');
 foreach($posts as $post) : setup_postdata($post);
 ?>
 <h2 class="post-title"><a href="<?php the_permalink() ?>" title="Permanent link to <?php the_title(); ?>"><?php the_title(); ?></a></h2>
-<p class="post-meta"><?php the_time('F jS, Y') ?> / <?php the_category(', ') ?> / <?php comments_popup_link('No comments', '1 comment', '% comments','Comments are off for this post'); ?></p>
+<p class="post-meta"><?php the_time('F jS, Y') ?> / <?php the_category(', ') ?> / <?php comments_popup_link('No comments', '1 comment', '% comments','Comments are off for this post'); ?><?php edit_post_link('e &hellip;', ' / ', ''); ?></p>
 <div class="post-body">
 <?php the_excerpt(); ?>
 <p class="more"><a href="<?php the_permalink() ?>" title="<?php the_title(); ?>">&#x21E5; Read the article in full</a></p>
@@ -36,7 +36,7 @@ google_ad_height = 90;
 google_ad_format = "728x90_as";
 google_ad_type = "text_image";
 //2007-03-29: brajeshwar-theme
-google_ad_channel = "1254625883"; //change this to your google adsense appropriate channel
+google_ad_channel = "1254625883"; //change this to your google adsense appropriate channel (optional)
 //-->
 </script>
 <script type="text/javascript"
@@ -63,7 +63,7 @@ foreach($posts as $post) : setup_postdata($post);
 ?>
 <div class="post" id="post-<?php the_ID(); ?>">
 <h2 class="post-title"><a href="<?php the_permalink() ?>" title="Permanent link to <?php the_title(); ?>"><?php the_title(); ?></a></h2>
-<p class="post-meta"><?php the_time('F jS, Y') ?> / <?php the_category(', ') ?> / <?php comments_popup_link('No comments', '1 comment', '% comments','Comments are off for this post'); ?></p>
+<p class="post-meta"><?php the_time('F jS, Y') ?> / <?php the_category(', ') ?> / <?php comments_popup_link('No comments', '1 comment', '% comments','Comments are off for this post'); ?><?php edit_post_link('e &hellip;', ' / ', ''); ?></p>
 <div class="post-body">
 <?php the_content('&#x21E5; Continue reading'); ?>
 </div>

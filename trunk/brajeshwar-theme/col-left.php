@@ -7,7 +7,14 @@
 
 <div class="left-sec categories">
 <h3 class="sec-title">Categories</h3>
+
 <ul><?php wp_list_categories('orderby=name&show_count=1&hide_empty=1&title_li'); ?></ul>
+<!-- uncomment this form section if you want a drop down instead of the list, and either delete or comment the above line
+<form action="<?php bloginfo('url'); ?>" method="get">
+<?php wp_dropdown_categories('show_option_all&orderby=name&order=ASC&show_last_update=0&hide_empty=1&show_count=1&hierarchical=0'); ?>
+<input type="submit" name="submit" value="Go" />
+</form>
+-->
 </div>
 
 <div class="left-sec archives">

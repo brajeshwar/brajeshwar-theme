@@ -49,11 +49,11 @@ return;
 
 <?php else : ?>
 <p>
-<label for="comment-author">Name <em><?php if ($req) echo "(required)"; ?></em></label>
+<label for="comment-author">Name <em><?php if ($req) echo "(<strong>required</strong>)"; ?></em></label>
 <input type="text" name="author" id="comment-author" value="<?php echo $comment_author; ?>" tabindex="1" />
 </p>
 <p>
-<label for="comment-email">Mail <em>(will not be published) <?php if ($req) echo "(required)"; ?></em></label>
+<label for="comment-email">Mail <em>(will not be published) <?php if ($req) echo "(<strong>required</strong>)"; ?></em></label>
 <input type="text" name="email" id="comment-email" value="<?php echo $comment_author_email; ?>" tabindex="2" />
 </p>
 <p>
