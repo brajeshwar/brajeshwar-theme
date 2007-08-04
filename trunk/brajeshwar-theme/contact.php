@@ -16,9 +16,10 @@ Template Name: Contact
 <div id="col-main">
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
+<h3 class="sec-title"><?php the_title(); ?></h3>
+
 <!-- BEGIN post -->
 <div class="post">
-
 <div class="post-body">
 
 <?php
@@ -38,7 +39,6 @@ Template Name: Contact
 ?>
 
 </div>
-
 </div>
 <?php endwhile; else : ?>
 <?php endif; ?>
