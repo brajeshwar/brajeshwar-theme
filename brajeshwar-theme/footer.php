@@ -5,7 +5,8 @@
 <div id="footer">
 <p>
 &copy; Copyright <?php echo date('Y');?> <?php bloginfo('name'); ?> &mdash;
-Powered by <a href="http://theme.brajeshwar.com/" title="Brajeshwar Theme">Brajeshwar Theme</a>
+<a href="http://wordpress.org/" title="Powered by WordPress <?php bloginfo('version'); ?>">WordPress</a></li>
+Theme by <a href="http://theme.brajeshwar.com/" title="Brajeshwar Wordpress Theme">Brajeshwar</a>
 </p>
 </div>
 

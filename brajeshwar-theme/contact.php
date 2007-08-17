@@ -37,6 +37,7 @@ Template Name: Contact
 		';
 	}
 ?>
+<?php edit_post_link('&uarr; edit this page'); ?>
 
 </div>
 </div>
