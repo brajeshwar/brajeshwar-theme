@@ -24,13 +24,8 @@
 <!-- javascript -->
 
 <!-- favicon -->
-<link href="<?php bloginfo('template_directory'); ?>/i/favicon.ico"  type="image/x-icon" rel="icon" />
-<link href="<?php bloginfo('template_directory'); ?>/i/favicon.ico" type="image/x-icon" rel="shortcut icon" />
-
-<!-- if you have your own favicon at your site root, then replace the above with this two lines below 
 <link href="<?php bloginfo('url'); ?>/favicon.ico"  type="image/x-icon" rel="icon" />
 <link href="<?php bloginfo('url'); ?>/favicon.ico" type="image/x-icon" rel="shortcut icon" />
--->
 
 <?php wp_head(); ?>
 </head>

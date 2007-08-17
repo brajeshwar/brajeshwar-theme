@@ -25,20 +25,20 @@ $websitename = get_bloginfo('name'); #sets the blog's name, according to wordpre
         echo "tried going to "; #starts assembling an output paragraph
 	$casemessage = "All is not lost!";
   } elseif (isset($_SERVER['HTTP_REFERER'])) {
-    #this will help the user find what they want, and email me of a bad link
-	echo "clicked a link to"; #now the message says You clicked a link to...
-        #setup a message to be sent to me
+  #this will help the user find what they want, and email me of a bad link
+	echo "clicked a link to<br /><br />"; #now the message says You clicked a link to...
+  #setup a message to be sent to me
 	$failuremess = "A user tried to go to $website"
-        .$_SERVER['REQUEST_URI']." and received a 404 (page not found) error. ";
+  .$_SERVER['REQUEST_URI']." and received a 404 (page not found) error. ";
 	$failuremess .= "It wasn't their fault, so try fixing it.  
-        They came from ".$_SERVER['HTTP_REFERER'];
+  They came from ".$_SERVER['HTTP_REFERER'];
 	// uncomment the next link if you the admin to be emailed of 404 errors (it will be too many mails for a high traffic site, I hated that with my site at http://www.brajeshwar.com/)
 	// mail($adminemail, "Bad Link To ".$_SERVER['REQUEST_URI'], $failuremess, "From: $websitename <wordpress@$website>");
-	$casemessage = "An administrator has been emailed about this problem, too.";#set a friendly message
+	$casemessage = "An administrator has been emailed about this problem.";#set a friendly message
   }
   echo " ".$website.$_SERVER['REQUEST_URI']; ?> 
-	and it doesn't exist. <?php echo $casemessage; ?>You can click back and try again or search for what you're looking for:
-  <?php include(TEMPLATEPATH . "/searchform.php"); ?>
+	<br /><br />and it doesn't exist. 
+	<?php echo $casemessage; ?>
 </p>
 </div>
 </div>

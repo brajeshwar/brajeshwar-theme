@@ -15,10 +15,13 @@ Template Name: Archives
 <div id="col-main">
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
+<h3 class="sec-title"><?php the_title(); ?></h3>
+
 <!-- BEGIN post -->
 <div class="post">
 
 <h2 class="post-title">Archives - Yearly</h2>
+
 <div class="post-body">
 <ul>
 <?php
