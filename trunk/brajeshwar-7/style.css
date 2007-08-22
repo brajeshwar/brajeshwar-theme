@@ -379,7 +379,7 @@ line-height: 18px;
 #col-main a:hover {
 border-bottom: 1px dotted #666;
 background: #e0e0e0;
-text-color: #333;
+color: #333;
 }
 
 /* prev-next navigation */
