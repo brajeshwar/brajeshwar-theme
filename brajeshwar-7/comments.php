@@ -19,7 +19,7 @@ return;
 ?>
 <?php if ($comments) : ?>
 <?php foreach ($comments as $comment) : ?>
-<div class="comment id="comment-<?php comment_ID() ?>">
+<div class="comment" id="comment-<?php comment_ID() ?>">
 <div class="comment-body clearfix">
 <?php comment_text() ?>
 </div>
@@ -53,17 +53,17 @@ return;
 <input type="text" name="author" id="comment-author" value="<?php echo $comment_author; ?>" tabindex="1" />
 </p>
 <p>
-<label for="comment-email">Mail <em>(will not be published) <?php if ($req) echo "(<strong>required</strong>)"; ?></em></label>
+<label for="comment-email">Email <em>(will not be published) <?php if ($req) echo "(<strong>required</strong>)"; ?></em></label>
 <input type="text" name="email" id="comment-email" value="<?php echo $comment_author_email; ?>" tabindex="2" />
 </p>
 <p>
-<label for="url">Website</label>
+<label for="comment-url">Website</label>
 <input type="text" name="url" id="comment-url" value="<?php echo $comment_author_url; ?>" tabindex="3" />
 </p>
 <?php endif; ?>
 <p>
 <label for="comment-text">Comment</label>
-<textarea name="comment" id="comment-text" rows="12" tabindex="4"></textarea>
+<textarea name="comment" id="comment-text" rows="12" tabindex="4" cols="4"></textarea>
 </p>
 <?php do_action('comment_form', $post->ID); ?>
 <p>

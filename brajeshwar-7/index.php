@@ -3,7 +3,7 @@
 <!-- BEGIN #latest -->
 <div id="latest"><div id="latest-inner">
 		
-<div id="post-latest" id="post-<?php the_ID(); ?>">
+<div id="post-latest">
 <?php
 $posts = get_posts('numberposts=1');
 foreach($posts as $post) : setup_postdata($post);
