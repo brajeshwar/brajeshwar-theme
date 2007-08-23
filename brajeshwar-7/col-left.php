@@ -1,6 +1,6 @@
 <!-- BEGIN #col-left -->
 <div id="col-left">
-	
+<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Left Sidebar") ) : ?>
 <div class="left-sec rssicon">
 <p><a href="<?php bloginfo('rss2_url'); ?>" title="Subscribe to RSS Feed"><img src="<?php bloginfo('template_directory'); ?>/i/icon-rss.gif" width="72" height="109" alt="Subscribe to RSS Feed" /></a></p>
 </div>
@@ -32,6 +32,6 @@
 </select></p>
 </form>
 </div>
-
+<?php endif; ?> 
 </div>
 <!-- END #col-left -->
