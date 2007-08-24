@@ -6,4 +6,5 @@ List of bugs that we have found so far.
 
 == Details ==
 
-  * no bugs - we must be having a real good day
+  * no bugs - we must be having a real good day.
+  * no code is perfect either if you have a bug please submit it by going to the issued tab.
