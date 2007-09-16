@@ -32,6 +32,7 @@ google_ad_channel = "1254625883"; // change this to your google adsense channel
 
 <div class="article-skip"><a id="article"></a></div>
 <?php the_content(''); ?>
+<p><?php the_tags(); ?></p>
 
 <p class="post-meta-ind">
 <span class="meta-name">Technorati :</span> <span class="meta-detail"><a class="tr-linkcount" href="http://technorati.com/search/<?php the_permalink(); ?>">View blog reactions</a></span><br />
