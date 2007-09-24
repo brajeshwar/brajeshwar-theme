@@ -1,3 +1,9 @@
+<?php
+/*
+Template Name: Tags
+*/
+?>
+
 <?php get_header(); ?>
 
 <!-- BEGIN #wrap -->
