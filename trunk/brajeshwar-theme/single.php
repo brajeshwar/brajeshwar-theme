@@ -24,21 +24,11 @@
 	</div><!-- /primary -->
 	
 	<div id="secondary">
-		<?php if ( function_exists('wp_tag_cloud') ) : ?>
-			<div id="tags-container">
-				<h2>Popular Tags</h2>
-				<?php wp_tag_cloud('smallest=8&largest=16&unit=pt&number=30&orderby=name&format=list'); ?>
-			</div><!-- /tags-container -->
-		<?php endif; ?>
-		<span class="tags-footer"><a href="<?php bloginfo('url'); ?>/tags/" title="View all tags">View all tags</a></span>
+		<?php include(TEMPLATEPATH."/inc/tag-clouds.php");?>
 	</div><!-- /secondary -->
 	
 	<div id="tertiary">
-		<a href="<?php bloginfo('url'); ?>/ads/" title="Advertise Here" class="ad-300x250"><img src="<?php bloginfo('template_directory'); ?>/i/ads/ad-300x250.jpg" alt="Advertise Here" /></a>
-		<a href="<?php bloginfo('url'); ?>/ads/" title="Advertise Here" class="ad-125x125"><img src="<?php bloginfo('template_directory'); ?>/i/ads/ad-125x125-alpha.jpg" alt="Advertise Here" /></a>
-		<a href="<?php bloginfo('url'); ?>/ads/" title="Advertise Here" class="ad-125x125"><img src="<?php bloginfo('template_directory'); ?>/i/ads/ad-125x125-beta.jpg" alt="Advertise Here" /></a>
-		<a href="<?php bloginfo('url'); ?>/ads/" title="Advertise Here" class="ad-125x125-here"><img src="<?php bloginfo('template_directory'); ?>/i/ads/advertise-here.gif" alt="Advertise Here" /></a>
-		<span class="more-ads">Premium Sponsors | <a href="#ad-icon">view more</a></span>
+		<?php include(TEMPLATEPATH."/inc/ads-prm.php");?>
 	</div><!-- /tertiary -->
 	<div class="clear"><!-- /yeah, we're done with the primary content --></div>
 </div><!-- /content-primary -->
@@ -46,7 +36,10 @@
 <div id="content-secondary">
 	<div id="single">
 		<div id="single-entry">
-			<div class="entry"><?php the_content(''); ?></div>
+			<div class="entry">
+				<?php the_content(''); ?>
+				<?php edit_post_link('Edit this entry','<p class="more-edit">','</p>'); ?>
+			</div>
 			<div id="social-activity">
 				<div id="social-digg">
 					<script type="text/javascript">
@@ -69,25 +62,39 @@
 				</p>
 			</div>
 		</div><!-- /single-entry -->
-		<div id="single-entry-meta">			
-			<h5 class="top">Author</h5>
-			<p><a href="<?php the_author_url(); ?> "><?php the_author_nickname(); ?></a>, <?php the_author_description(); ?></p>
+		<div id="single-entry-meta">
+			<h5 class="top">Article</h5>
 			<p>Posted on <?php the_time('jS M, Y') ?> at <?php the_time('g:i a') ?>
 			<br />Filed in <?php the_category(', ') ?></p>			
+			<h5>Author</h5>
+			<p><a href="<?php the_author_url(); ?> "><?php the_author_nickname(); ?></a>, <?php the_author_description(); ?></p>
 			<h5>Comments</h5>
 			<p>There are currently <?php comments_number('no comments', 'one comment', '% comments' );?> on this article.
-			If you like to <a href="">add your response</a>, please feel free to do so.</p>			
-			<p>You can also subscribe to the <a href="">RSS feed</a> of the comments on this article.</p>
-			<p><span class="codeBlue"><em>Note:</em></span> Option to subscribe to comments with your emails is available at the bottom of the comment/response fields.</p>
-			<p><?php the_tags('<h5>Article tagged with</h5>', ', ', ''); ?></p>
+				<?php if (('open' == $post-> comment_status) && ('open' == $post->ping_status)) {
+				// Both Comments and Pings are open ?>
+				You can <a href="#respond">leave a response</a>, or <a href="<?php trackback_url(); ?>" rel="trackback">trackback</a> from your own site.				
+				<?php } elseif (!('open' == $post-> comment_status) && ('open' == $post->ping_status)) {
+				// Only Pings are Open ?>
+				Responses are currently closed, but you can <a href="<?php trackback_url(); ?> " rel="trackback">trackback</a> from your own site.				
+				<?php } elseif (('open' == $post-> comment_status) && !('open' == $post->ping_status)) {
+				// Comments are open, Pings are not ?>
+				You can skip to the end and <a href="#respond">leave a response</a>. Pinging is currently not allowed.				
+				<?php } elseif (!('open' == $post-> comment_status) && !('open' == $post->ping_status)) {
+				// Neither Comments, nor Pings are open ?>
+				Both comments and pings are currently closed.
+				<?php } ?>
+			</p>			
+			<p><?php the_tags('<h5>Tags</h5>', ', ', ''); ?></p>
+			
+			<h5>Endorsements</h5>
+			<a href="http://www.teknopoint.info/" title="Teknopoint Multimedia - The ultimate in Adobe Technologies Training in India"><img src="http://media.brajeshwar.com/i/ads/teknopoint-260x100.png" alt="Teknopoint Multimedia - The ultimate in Adobe Technologies Training in India" style="border: 0 none; height: 100px; width: 260px;" /></a>
+			
 			<h5>Links found in this Article</h5>
-			<ul>
-				<li><a href="">No idea yet</a></li>
-			</ul>
-			<h5>Related to this Article</h5>
-			<ul><li>An entry</li></ul>
+			<p>Will someone please suggest me how to do this one?</p>
+			<h5>Related Articles</h5>
+			<ul><?php related_posts(); ?></ul>
 			<h5>Popular Articles</h5>
-			<ul><li>An entry</li></ul>
+			<p>Will someone please suggest me how to do this one?</p>
 			<h5>Do More</h5>
 			<ul>
 				<li>Stumble on a <a href="<?php bloginfo('url'); ?>/?random">Random Article</a></li>
@@ -102,7 +109,7 @@
 	
 </div><!-- /content-secondary -->
 <?php endwhile; else: ?>
-oops! nothing found, so let's rebuild the whole thing? Nah! Find a better way to do this.
+	oops! nothing found, so let's rebuild the whole thing? Nah! Find a better way to do this.
 <?php endif; ?>
 
 <?php get_footer(); ?>

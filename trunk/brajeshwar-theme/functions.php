@@ -65,15 +65,12 @@ function year_month_archives () {
 
 /*
 fetch and display facebook status
-USAGE
-<?php status_facebook ('facebook-RSS-URL', '', '' ); ?>
+<?php facebookStatus('facebook-RSS-URL', ' ', NumberOfUpdates ); ?>
 \* ----------------------------------- ~o~ ----------------------------------- */
-function status_facebook () {
+function facebookStatus() {
 
-	// --- Initialize ---
 	require_once (ABSPATH . WPINC . '/rss-functions.php');
 
-	// --- Arguments ---
 	$argnum = func_num_args();
 	$arglist = func_get_args();
 	if ($argnum >= 1) $url = $arglist[0];
@@ -82,11 +79,11 @@ function status_facebook () {
 	if ($argnum >= 3) $numofitem = $arglist[2];
 		else $numofitem = 0;	// 0 = infinite
 
-	$disp = "\n";
+	$disp = "\n<!-- Facebook Status -->\n";
 
 	// --- Wrong Number of Arguments ---
 	if ($argnum < 1 or $argnum > 3) {
-		$disp .= "\tError!\n";
+		$disp .= "\t<span class='codeRed'>Error! Wrong number of arguments.\n";
 
 	// --- Get RSS ---
 	} elseif ($rss = fetch_rss($url)) { 
@@ -96,13 +93,6 @@ function status_facebook () {
 		$link = htmlentities($rss->channel[link]);
 		$copy = $rss->channel[copyright];
 
-
-		$disp .= "\t<h2 class=\"status-title\">$title</h2>\n";
-		if ($copy != '') $disp .= "\t<small>$copy</small><br />\n";
-
-		// --- Item Title and Copyright ---
-
-		$disp .= "\t<ul class=\"status\">\n";
 		if ($numofitem > 0) $rss->items = array_slice($rss->items, 0, $numofitem);
 		foreach($rss->items as $item) {
 			$title = $item[title];
@@ -118,7 +108,7 @@ function status_facebook () {
 
 			$link = htmlentities($item[link]);
 			if ($title != '') {
-				$disp .= "\t\t<li>$title";
+				$disp .= "\t\t<span>$title";
 
 				// Display how long it's been since the last update.
 				$disp .= "  (Updated ";
@@ -140,19 +130,15 @@ function status_facebook () {
 				// Show minutes if it's been more than a minute.
 				$disp .= floor($difference / 60);
 				$difference -= 60 * floor($difference / 60);
-				if(floor($difference / 60) == 1) { $disp .= ' minute, '; } else { $disp .= ' minutes ago)'; }
-				$disp .= "</li>\n";
+				if(floor($difference / 60) == 1) { $disp .= ' minute, '; } else { $disp .= ' minutes ago through Facebook)'; }
+				$disp .= "</span>\n";
 			}
-
 		}
-		$disp .= "\t</ul>\n";
 
 	// --- Not Found ---
 	} else {
-		$disp .= "\tError!\n";
+		$disp .= "\t<span class='codeRed'>Error! Check your Facebook RSS Feed or something is amiss.</span>\n";
 	}
-
-	// --- Display ---
 	return $disp ;
 }
 

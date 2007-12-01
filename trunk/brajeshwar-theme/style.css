@@ -13,7 +13,6 @@ CREDITS AND THANKS
 
 # Blueprint CSS Framework - http://code.google.com/p/blueprintcss/
 # WebSiteIcons - http://www.websiteicons.com/
-# Tabber - http://www.barelyfitz.com/projects/tabber/
 
 */
 
@@ -137,6 +136,7 @@ overflow: hidden;
 }
 div#title h1, div#title h1 a {
 display: block;
+width: 230px;
 background: #fff url(i/ui/logo.gif) 0 100% no-repeat;
 text-decoration: none;
 text-indent: -10000px;
@@ -144,7 +144,7 @@ overflow: hidden; /* we don't want to show the full outline to people surfing wi
 padding: 22px 0 0 0;
 line-height: 1.3;
 }
-div#title h1 a:hover, div#title h1 a:focus { background: #fff url(i/ui/logo-hover.gif) 0 100% no-repeat; }
+div#title h1 a:hover, div#title h1 a:focus { background: #fff url(i/ui/logo.gif) 100% 100% no-repeat; }
 div#title h1 a:hover { outline: none; } /* remove the outline only from mouse user and not keyboard users */
 
 /* header-meta */
@@ -195,7 +195,7 @@ width: 190px;
 /* content-primary
 \* ----------------------------------- ~o~ ----------------------------------- */
 div#content-primary {
-border-bottom: 1px solid #ccc;
+border-bottom: 1px solid #999;
 padding: 10px 0;
 }
 
@@ -204,8 +204,10 @@ div#primary, div#primary-single {
 float: left;
 width: 480px;
 margin-right: 20px;
-background: #efefef;
 }
+div#primary h2.post-title { font: normal normal normal 1.6em/1.5em Candara, "Trebuchet MS", Trebuchet, sans-serif; }
+div#primary h2.post-title a { color: #4a4a4a;  text-decoration: none; }
+div#primary h2.post-title a:hover { color: #000; }
 div#primary .more-post, div#primary .more-post a,
 div#primary .more-comment, div#primary .more-comment a {
 margin: 6px 0;
@@ -219,16 +221,17 @@ div#primary .more-post { float: left; padding-right: 20px; background: transpare
 div#primary .more-comment { float: right; padding-left: 20px; background: transparent url(i/icons/post-comments.gif) 0 80% no-repeat; }
 
 /* primary-content pages */
-div#content-primary .pages {
-width: 680px;
-background: #fff;
-}
+div#content-primary .pages, div#content-primary .archive { width: 680px; }
 div#content-primary .pages .post { padding: 0 40px; }
 div#content-primary .pages h2 {
 color: #666;
 font: normal normal normal 1.5em/1.5 Candara, "Trebuchet MS", Trebuchet, sans-serif;
 text-transform: uppercase;
 }
+
+/* primary-content archive */
+div#content-primary .archive .post { padding: 0 40px; }
+div#content-primary .archive h2 { color: #666; font: normal normal normal 1.5em/1.5 Candara, "Trebuchet MS", Trebuchet, sans-serif; }
 
 /* primary-content archives */
 div#content-primary .archives {}
@@ -253,7 +256,7 @@ padding-left: 40px;
 margin: 0 0 5px 0;
 font: normal normal normal 1.6em/1.5em Candara, "Trebuchet MS", Trebuchet, sans-serif;
 }
-div#primary-single h2.post-title a { color: #333; text-decoration: none; }
+div#primary-single h2.post-title a { color: #4a4a4a; text-decoration: none; }
 div#primary-single h2.post-title a:hover { color: #000; }
 div#primary-single .post-excerpt {
 background: #fcfcfc url(i/ui/excerpt-bg.gif) 0 0 no-repeat;
@@ -277,110 +280,9 @@ height: 255px !important;
 overflow: hidden;
 background: url(i/ui/google-adsense-vertical.gif) 100% 100% no-repeat;
 }
-
-/* tabber
-\* ----------------------------------- ~o~ ----------------------------------- */
-
-.tabberlive .tabbertabhide { border: 0; display: none; } /* REQUIRED to hide the non-active tab content. But do not hide them in the print stylesheet! */
-.tabber { display: none; } /* .tabber = before the tabber interface is set up */
-.tabberlive { padding: 0; } /* .tabberlive = after the tabber interface is set up */
-
-/*
-ul.tabbernav = the tab navigation list
-li.tabberactive = the active tab
-*/
-.tabbernav {
-height: 30px;
-line-height: 30px;
-margin: 0;
-padding: 10px 10px 0;
-background: #999;
-}
-.tabbernav li {
-height: 40px;
-line-height: 40px;
-float: left;
-margin: 0 4px 0 0;	
-padding: 0;
-background: transparent;
-list-style-type: none;
-border: 0;
-}
-.tabbernav li a {
-float: left;
-height: 30px;
-font: normal normal normal 1.2em/normal "Lucida Grande", "Lucida Sans Unicode", Verdana, Helvetica, Arial, sans-serif;
-line-height: 30px;
-display: block;	
-padding: 0 10px;
-background: transparent;
-color: #fff;
-border: 1px solid #333;
-border-color: transparent;
-border-bottom: 0;
-text-transform: uppercase;
-text-decoration: none;
-}
-.tabbernav li a:hover {
-background: #efefef;
-height: 30px;
-line-height: 30px;
-color: #666;
-}
-.tabbernav li.tabberactive a {
-background: #efefef;
-height: 30px;
-line-height: 30px;
-color: #666;
-}
-
-/*--------------------------------------------------
-.tabbertab = the tab content
-Add style only after the tabber interface is set up (.tabberlive)
---------------------------------------------------*/
-.tabberlive .tabbertab {
-background: #efefef;
-padding: 10px;
-margin: 0;
-height: 356px !important;
-border-top: 1px solid #efefef;
-}
-.tabberlive .tabbertab ol {	
-margin: 5px 20px;
-padding: 0;
-}
-
-.tabberlive .tabbertab ul {}
-.tabberlive .tabbertab ul li {}
-.tabberlive .tabbertab a {}
-.tabberlive .tabbertab .entry { padding: 0; margin: 0; }
-.tabberlive .tabbertab a:hover {}
-.tabberlive .tabbertab p {}
-
-/* If desired, hide the heading since a heading is provided by the tab */
-.tabberlive .tabbertab h2,
-.tabberlive .tabbertab h3 { display: none; }
-
-/* Example of using an ID to set different styles for the tabs on the page */
-.tabberlive#tab1 {}
-.tabberlive#tab2 {}
-.tabberlive#tab2 .tabbertab { overflow:auto; }
-.tabbertab .postinfo { margin:0 0 10px; }
-
-.tabbertab .post-title, .tabbertab .post-title a {
-font: normal normal normal 1.2em/normal Corbel, Verdana, "Bitstream Vera Sans", sans-serif;
-letter-spacing: -1px;
-line-height: 110%;
-margin: 0 0 10px 0;
-padding: 0;
-text-align: left;
-color: #575757;
-text-decoration: none;
-}
-.tabbertab .post-title a:hover { color: #000; }
-
-/* tabber ENDS
-\* ----------------------------------- ~o~ ----------------------------------- */
+.more-edit { margin: 20px 0; }
+.more-edit a { font-weight: bold; padding-right: 15px; background: url(i/icons/edit-pencil.gif) 100% 60% no-repeat; color: #008B00; }
+.more-edit a:hover { color: #00CD00; }
 
 /* secondary */
 div#secondary {
@@ -390,15 +292,15 @@ margin-right: 20px;
 background: #fff url(i/ui/tags-bg.gif) left bottom no-repeat;
 }
 div#secondary h2 {
-color: #666;
-font: normal normal normal 1.4em/normal Candara, "Trebuchet MS", Trebuchet, sans-serif;
-text-transform: uppercase;
-padding: 0;
-margin: 0 0 20px 0;
+color: #4a4a4a;
+font: normal normal normal 1.6em/1.5em Candara, "Trebuchet MS", Trebuchet, sans-serif;
 }
 div#secondary div#tags-container {
 height: 380px !important;
+text-align: justify;
 }
+div#secondary div#tags-container a { text-decoration: none; color: #999; padding: 2px; text-transform: lowercase; }
+div#secondary div#tags-container a:hover { text-decoration: underline; color: #000; }
 div#secondary .tags-footer {
 float: left;
 margin: 10px 0;
@@ -448,9 +350,8 @@ div#tertiary .more-ads {
 float: left;
 width: 270px; /* width of the tertiary DIV - left & right padding */
 margin: 0;
-padding: 14px 15px 2px 15px;
+padding: 8px 15px 0 15px;
 text-transform: lowercase;
-border-bottom: 1px solid #efefef;
 background: url(i/icons/arrow-up-down.gif) 0 75% no-repeat;
 }
 div#tertiary .more-ads a { text-decoration: underline; padding-right: 15px; background: url(i/icons/arrow-up-down.gif) 100% 75% no-repeat; }
@@ -464,9 +365,10 @@ float: left;
 width: 320px;
 margin: 10px 12px 0 0; /* instead of worrying for the third column, just set it a little smaller - (320 x 3) + (12 x 3) = 996 */
 border-bottom: 1px solid #ccc;
+text-align: justify;
 }
 div#content-secondary .post-article {
-height: 150px !important;
+height: 120px !important;
 overflow: hidden;
 margin-bottom: 10px;
 }
@@ -504,7 +406,6 @@ div#post-nav {
 text-align: center;
 margin-top: 20px;
 padding: 5px;
-border-top: 1px dotted #efefef;
 text-transform: lowercase;
 }
 div#post-nav a { color: #515151; text-decoration: none; } div#post-nav a:hover { color: #000; }
@@ -569,16 +470,19 @@ div#single-entry-meta ul li, div#comments-meta ul li { padding-left: 15px; backg
 \* ----------------------------------- ~o~ ----------------------------------- */
 /* figure */
 .figure { border-bottom: 1px dotted #ccc; }
-.figure img { margin: 0; padding: 0; }
+.figure img { margin: 0; padding: 0; border: 0 none; }
 .figure p { margin: 0; padding: 0; }
 .figure .credit { font-size: x-small; text-align: right; }
 .figure .credit cite { font-style: inherit; }
-.figure .caption { text-align: justify; margin-bottom: 6px; }
+.figure .caption { margin-bottom: 6px; }
 .figure .title { font-weight: bold; background: none; font-style: normal; }
 .figure .title:after { content: ": "; }
-div#content-primary .figure img { width: 460px; } /* set a width for the home page - 460px */
+div#primary .figure { height: 335px !important; }
+div#primary .figure img { width: 480px; } /* set a width for the home page - 480px */
 div#single .figure { width: 640px; } /* set the width for the single page - 640px */
-div#content-secondary .post-article .figure { display: none; } /* do not display for the secondary content on the home page */
+div#content-secondary .post-article .figure, /* do not display for the secondary content on the home page */
+div#content-primary .archive .figure
+{ display: none; }
 
 /* wordpress specific */
 img.wp-smiley,
@@ -621,13 +525,7 @@ div#comments-body .comments-details a:hover { text-decoration: underline; }
 
 div#commentsform-envelop {}
 form#commentform { margin: 10px 0; padding-left: 180px; }
-form#commentform fieldset { border: 0 none; float: left; display: inline; clear: left; width: 680px; padding: 0; margin: 0; }
-form#commentform label { float: left; display: inline; margin: 5px 0 5px -180px; width: 160px; text-align: right; padding: 2px; }
-form#commentform input { background-color: #fafafa; color: #666; width:  220px; height: 20px; border: 1px solid #999; margin: 5px 0; font-size: small; padding: 2px; }
-form#commentform input:hover, form#commentform input:active, form#commentform textarea:hover { background: #fff; }
-form#commentform small.help-text { color: #999; font-size: small; padding: 2px 10px; }
-form#commentform textarea { background-color: #f4f4f4; width:  400px; color: #666; }
-form#commentform input.button { float: left; display: inline; border: 0 none; width: 89px; height: 26px; }
+form#commentform p { padding: 4px 0; }
 
 /* footer
 \* ----------------------------------- ~o~ ----------------------------------- */

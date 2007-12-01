@@ -26,13 +26,9 @@ Template Name: Contact Template
 	</div><!-- /primary -->
 		
 	<div id="tertiary">
-		<a href="<?php bloginfo('url'); ?>/ads/" title="Advertise Here" class="ad-300x250"><img src="<?php bloginfo('template_directory'); ?>/i/ads/ad-300x250.jpg" alt="Advertise Here" /></a>
-		<a href="<?php bloginfo('url'); ?>/ads/" title="Advertise Here" class="ad-125x125"><img src="<?php bloginfo('template_directory'); ?>/i/ads/ad-125x125-alpha.jpg" alt="Advertise Here" /></a>
-		<a href="<?php bloginfo('url'); ?>/ads/" title="Advertise Here" class="ad-125x125"><img src="<?php bloginfo('template_directory'); ?>/i/ads/ad-125x125-beta.jpg" alt="Advertise Here" /></a>
-		<a href="<?php bloginfo('url'); ?>/ads/" title="Advertise Here" class="ad-125x125-here"><img src="<?php bloginfo('template_directory'); ?>/i/ads/advertise-here.gif" alt="Advertise Here" /></a>
-		<span class="more-ads">Premium Sponsors | <a href="#ad-icon">view more</a></span>
+		<?php include(TEMPLATEPATH."/inc/ads-prm.php");?>
 	</div><!-- /tertiary -->
-	<div class="clear"><!-- /yeah, we're done with the primary content --></div>
+	<div class="clear"></div>
 </div><!-- /content-primary -->
 
 <?php get_footer(); ?>
