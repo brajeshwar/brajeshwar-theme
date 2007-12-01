@@ -63,35 +63,25 @@
 	<h3 id="respond">Your Comment</h3>
 		<?php if ( get_option('comment_registration') && !$user_ID ) : ?>
 		<p>You must be <a href="<?php echo get_option('siteurl'); ?>/wp-login.php?redirect_to=<?php the_permalink(); ?>">logged in</a> to post a comment.</p>
-		<?php else : ?>
-		
+		<?php else : ?>	
 		<form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform">
 		<?php if ( $user_ID ) : ?>
-		<p>Logged in as <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>. <a href="<?php echo get_option('siteurl'); ?>/wp-login.php?action=logout" title="Log out of this account">Logout</a></p>
+		<p>Logged in as <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>. <a href="<?php echo get_option('siteurl'); ?>/wp-login.php?action=logout" title="Log out of this account">Logout &raquo;</a></p>
 		<?php else : ?>
-		<fieldset>
-			<label for="author">Your Name</label>
-			<input type="text" id="author" name="author" value="<?php echo $comment_author; ?>" tabindex="1" /><small class="help-text">Real names preferred <?php if ($req) echo '<span class="codeRed">*</span>'; ?></small>
-		</fieldset>
-		<fieldset>
-			<label for="email">Your E-mail</label>
-			<input type="text" id="email" name="url" value="<?php echo $comment_author_email; ?>" tabindex="2" /><small class="help-text">Neither published nor sold <?php if ($req) echo '<span class="codeRed">*</span>'; ?></small>
-		</fieldset>
-		<fieldset>
-			<label for="url">Your URL</label>
-			<input type="text" id="url" name="url" value="<?php echo $comment_author_url; ?>" tabindex="3" /><small class="help-text">Your website, blog (optional)</small>
-		</fieldset>
+		<p><input type="text" name="author" id="author" value="<?php echo $comment_author; ?>" size="30" tabindex="1" />
+		<label for="author"><small>Name <?php if ($req) echo "<span class='codeRed'>*</span>"; ?></small></label></p>
+		<p><input type="text" name="email" id="email" value="<?php echo $comment_author_email; ?>" size="30" tabindex="2" />
+		<label for="email"><small>Mail (will not be published) <?php if ($req) echo "<span class='codeRed'>*</span>"; ?></small></label></p>
+		<p><input type="text" name="url" id="url" value="<?php echo $comment_author_url; ?>" size="30" tabindex="3" />
+		<label for="url"><small>Website, Blog (optional)</small></label></p>
 		<?php endif; ?>
-		<fieldset>
-			<label for="id_comment">Your Message</label>
-			<textarea name="comment" id="comment" rows="5" cols="100%" tabindex="4"></textarea>
-			<input type="hidden" name="comment_post_ID" value="<?php echo $id; ?>" />
-		</fieldset>
-			<fieldset class="submit">
-			<input type="image" src="<?php bloginfo('template_directory'); ?>/i/buttons/submit.png" class="button" id="submit" name="submit" value="Submit" tabindex="5" />
-		</fieldset>
+		<!--<p><small><strong>XHTML:</strong> You can use these tags: <code><?php echo allowed_tags(); ?></code></small></p>-->
+		<p><textarea name="comment" id="comment" cols="100%" rows="10" tabindex="4"></textarea></p>
+		<p><input name="submit" type="image" class="button" src="<?php bloginfo('template_directory'); ?>/i/buttons/submit.png" id="submit" tabindex="5" value="Submit" />
+		<input type="hidden" name="comment_post_ID" value="<?php echo $id; ?>" />
+		</p>
 		<?php do_action('comment_form', $post->ID); ?>
-	</form>
+		</form>
 	</div>
 	<!-- END: comments-form -->
 	
@@ -103,21 +93,9 @@
 		<p>So far,
 		<br />there are <strong><?php comments_number('No Comments','One Comment','% Comments'); ?></strong> to this article.</p>
 		<h5>Most commented article</h5>
-		<ul>
-			<li>Article one and some title (1003)</li>
-			<li>Article one and some title (1003)</li>
-			<li>Article one and some title (1003)</li>
-			<li>Article one and some title (1003)</li>
-			<li>Article one and some title (1003)</li>
-		</ul>
+		<p>Still working on this one!</p>
 		<h5>Top commentors</h5>
-		<ul>
-		<li>Rajnikant (13)</li>
-		<li>Rajnikant (13)</li>
-		<li>Rajnikant (13)</li>
-		<li>Rajnikant (13)</li>
-		<li>Rajnikant (13)</li>
-		</ul>
+		<p>Still working on this one!</p>
 		<p>You can also just <a href="">email me</a> with your views, responses instead of commenting here!</p>
 	</div><!-- /comments-meta -->
 	<div class="clear"></div>

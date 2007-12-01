@@ -8,10 +8,10 @@
 
 
 // Enter your email address
-    $gb_email_address=        "brajeshwar@papernapkin.net"; 
+    $gb_email_address=        "brajeshwar@brajeshwar.com";
 
 // Enter your name or company
-    $gb_contact_name=         "Brajeshwar";
+    $gb_contact_name=         "Brajeshwar"; 
 
 // Set site/form possession
     $gb_possession=           "pers";                   // "pers"; or "org";
@@ -29,10 +29,12 @@
 $gb_options = array( ###########################################################
 
 
-    "Just to say hello",
-    "To make a comment",
-    "To ask a question",
-    "Report a site problem",
+    "Projects and Consultancy",
+    "Advertisement",
+    "Apply for a Job/Vacancy",
+    "Submit Job Requirement",
+    "Submit an article",
+    "Site Feedback",
     "Other (explain below)",
 
 
@@ -43,8 +45,8 @@ $gb_options = array( ###########################################################
 
 
 // Enter a simple to anser question and answer
-    $gb_randomq=     "Is fire hot or cold?";
-      $gb_randoma=   "hot";                     // Case insensitive
+    $gb_randomq=     "Is ice hot or cold?";
+      $gb_randoma=   "cold";                     // Case insensitive
 
 
 /*
@@ -80,10 +82,10 @@ $gb_options = array( ###########################################################
     $gb_heading=              "2";                // Use 1-6 (1 is largest)
 
 // Enter your error heading
-     $error_heading=          "Whoops! Error Made!"; 
+     $error_heading=          "Whoops! There was an error!"; 
 
 // Enter your success heading
-     $success_heading=        "Success! Mail Sent!";
+     $success_heading=        "Success! Mail Sent successfully!";
 
 
 ################################################################################
@@ -94,7 +96,7 @@ $gb_options = array( ###########################################################
      $x_or_html=              "xhtml";            // or "html";
 
 // Enter your button text
-     $send_button=            "Submit Form";
+     $send_button=            "Send Message";
 
 // Enter credit link option
      $showcredit=             "no";              // or "no"; 
@@ -103,7 +105,7 @@ $gb_options = array( ###########################################################
      $showprivacy=            "no";              // or "no"; 
 
 // Enter privacy link url
-     $privacyurl=             "http://yourdomain.com/privacypolicy.php";
+     $privacyurl=             "http://www.brajeshwar.com/privacy/";
 
 // Choose to allow/disallow CC option
     $show_cc=                 "yes";                      // or "no";
@@ -146,6 +148,7 @@ $ip_blacklist = array( #########################################################
 // form URL below and comment out the string shown by putting // in front of it
 ################################################################################
 
-$form_location= "http://".$_SERVER['HTTP_HOST']."".@$_SERVER['REQUEST_URI']."";
+// $form_location = "http://".$_SERVER['HTTP_HOST']."".@$_SERVER['REQUEST_URI']."";
+$form_location = "http://labs.brajeshwar.com/wp/contact";
 
-############################################################################# ?> 
+############################################################################# ?>

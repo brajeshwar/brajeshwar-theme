@@ -1,41 +1,34 @@
 <?php get_header(); ?>
 
-<!-- START: content -->
-<div id="content">
+<div id="content-primary">
+	<div id="primary" class="archive">
+		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>		
+			<div class="post" id="post-<?php the_ID(); ?>">
+				<h2 class="post-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
+				<p class="post-meta"><?php the_time('jS M, Y') ?> - <?php the_time('g:i a') ?> <?php edit_post_link('e_', ' | ', ''); ?>
+				<br />Filed in <?php the_category(', ') ?>
+				<br /><?php comments_popup_link('no comments', 'one comment', '% comments' );?>
+				</p>
+				<?php the_excerpt_reloaded(200, '<p></p><a></a><strong></strong><em></em>', 'content', FALSE, 'more_link_text (depend on the prev value)', FALSE, 1, TRUE); ?>
+				<p><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>">Read the article</a></p>
+			</div>			
+		<?php endwhile; ?>
+		<div id="post-nav">
+			<?php next_posts_link('<span class="prev">Older Articles</span>', '0') ?>
+			<?php previous_posts_link('<span class="next">Newer Articles</span>', '0') ?>
+		</div><!-- /post-nav -->
+		<?php else : ?>		
+		<div class="post">
+			<h2 class="post-title">Not Found</h2>
+			<p>Sorry, but you are looking for something that isn't here.</p>
+		</div>		
+		<?php endif; ?>
+	</div><!-- /primary -->
+		
+	<div id="tertiary">
+		<?php include(TEMPLATEPATH."/inc/ads-prm.php");?>
+	</div><!-- /tertiary -->
+	<div class="clear"><!-- /yeah, we're done with the primary content --></div>
+</div><!-- /content-primary -->
 
-<!-- START: content-article -->
-<div id="content-article">
-<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-
-	<div class="post" id="post-<?php the_ID(); ?>">
-		<h2><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
-		<p class="postmetadata"><?php the_time('M jS, Y') ?> | <?php the_category(', ') ?> | <?php comments_popup_link('No Comments', '1 Comment', '% Comments'); ?><?php edit_post_link('e &hellip;', ' | ', ''); ?></p>
-		<?php the_content('&rarr; continue reading'); ?>
-	</div>
-
-<?php endwhile; ?>
-
-<!-- START: navigation -->
-<div class="navigation">
-	<div class="alignleft"><?php next_posts_link('&larr; Previous Entries') ?></div>
-	<div class="alignright"><?php previous_posts_link('Next Entries &rarr;') ?></div>
-</div>
-<!-- END: navigation -->
-
-<?php else : ?>
-
-<div class="post">
-	<h2 class="center">Not Found</h2>
-	<p class="center">Sorry, but you are looking for something that isn't here. Looks like the site does not have articles yet!</p>
-</div>
-
-<?php endif; ?>
-</div>
-<!-- END: content-article -->
-
-<?php include(TEMPLATEPATH."/sidebar-alt.php");?>
-<?php get_sidebar(); ?>
-	
-</div>
-<!-- END: content -->
 <?php get_footer(); ?>

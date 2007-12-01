@@ -15,23 +15,6 @@
 <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
-<!-- tabber -->
-<script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/lib/tabber/tabber-minimized.js"></script>
-<script type="text/javascript"><!--//--><![CDATA[//><!--
-sfHover = function() {
-	var sfEls = document.getElementById("nav").getElementsByTagName("LI");
-	for (var i=0; i<sfEls.length; i++) {
-		sfEls[i].onmouseover=function() {
-			this.className+=" sfhover";
-		}
-		sfEls[i].onmouseout=function() {
-			this.className=this.className.replace(new RegExp(" sfhover\\b"), "");
-		}
-	}
-}
-if (window.attachEvent) window.attachEvent("onload", sfHover);
-//--><!]]></script>
-
 <!-- favicon -->
 <link href="<?php bloginfo('url'); ?>/favicon.ico"  type="image/x-icon" rel="icon" />
 <link href="<?php bloginfo('url'); ?>/favicon.ico" type="image/x-icon" rel="shortcut icon" />
@@ -45,18 +28,19 @@ if (window.attachEvent) window.attachEvent("onload", sfHover);
 
 <div id="header">
 	<div id="notice">
-		<span class="title">I've something to say</span>Welcome to the new fresh design - <a href="">Brajeshwar Resurrect</a>.
+		<span class="title">Message from <?php bloginfo('name'); ?></span>
+		Still tweaking and tinkering with the new site design.
 	</div><!-- /notice -->
 
 	<div id="nav">
 		<ul>
 			<li<?php if (is_home()) { echo " class=\"current_page_item\""; } ?>><a href="<?php bloginfo('url'); ?>">Home</a></li>
-			<?php wp_list_pages('depth=1&sort_order=asc&exclude=44&title_li='); ?>
+			<?php wp_list_pages('exclude=724,712,695&depth=1&sort_order=asc&exclude=44&title_li='); ?>
 		</ul>
 	</div><!-- /nav -->
 
 	<div id="nav-right">
-		<div class="alignleft"><a href="" title="Email & Other Subscriptions">Email & Other Subscriptions</a></div>
+		<div class="alignleft"><a href="<?php bloginfo('url'); ?>/subscribe/" title="Email & Other Subscriptions">Email & Other Subscriptions</a></div>
 		<div class="alignright rss-feed"><a href="<?php bloginfo('rss2_url'); ?>" title="Subscribe to the RSS Feed">RSS Feed</a></div>
 	</div><!-- /nav-right -->
 	<div class="clear"><!-- --></div>
