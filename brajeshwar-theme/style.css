@@ -4,7 +4,10 @@ Theme URI: http://theme.brajeshwar.com/
 Version: v8.0.0
 Author: Brajeshwar
 Author URI: http://www.brajeshwar.com/
-Description: <p>Content focused, usability enhanced yet simple, crisp, clear and light. The fonts style is compatible with Microsoft Windows Vista.</p><p>Details, Preview and latest release downloads are available at the <a href="http://theme.brajeshwar.com/" title="Brajeshwar Theme">theme's website</a>.</p><p>Visit the <a href="http://www.brajeshwar.com/" title="Brajeshwar">Author's site</a> from where this theme got its inspiration.</p>
+Description:
+<p>Content focused, usability enhanced yet simple, crisp, clear and light.</p>
+<p>Details, Preview and latest release downloads are available at the <a href="http://theme.brajeshwar.com/" title="Brajeshwar Theme">theme's website</a>.
+</p><p>Visit the <a href="http://www.brajeshwar.com/" title="Brajeshwar">Author's site</a> from where this theme got its inspiration.</p>
 
 Provided under the GNU General Public Licence v3.0
 http://www.gnu.org/licenses/gpl-3.0.txt
@@ -20,7 +23,7 @@ CREDITS AND THANKS
 @import 'blueprint.css';
 
 /* override some blueprint classes for this design */
-a { color: #666; text-decoration: underline; }
+a { color: #333; text-decoration: underline; }
 a:focus, a:hover { color: #000; }
 em { background: none; }
 blockquote { color: #919191; background: #fcfcfc; padding: 5px 10px 5px 20px; border-left: 4px solid #F0F0F0; }
@@ -46,7 +49,7 @@ blockquote:after, .entry q:after { content: ""; }
 html, body {
 margin: 0; padding: 0;
 text-align: center;
-color: #666;
+color: #333;
 }
 
 div#wrapper {
@@ -105,6 +108,11 @@ div#nav li.current_page_item a,
 div#nav a:hover {
 text-decoration: underline;
 color: #000;
+}
+div#nav a img {
+display: block;
+text-decoration: none;
+border: 0 none;
 }
 
 /* nav-right */
@@ -171,16 +179,19 @@ color: #666;
 div#header-meta span.hd-meta-value {}
 div#header-meta span.search-input-l { float: left; width: 10px; height: 22px; background: url(i/ui/input-search-lr.gif) left center no-repeat; }
 div#header-meta span.search-input-r { float: left; width: 25px; height: 22px; background: url(i/ui/input-search-lr.gif) right center no-repeat; }
-div#header-meta span.search-input input {
+div#header-meta span.search-input {
 float: left;
-border: 0;
+border: 0 none;
 width: 155px;
-height: 19px; /* actual height is 22px, so subtract 3px for the padding done below*/
-padding: 3px 0 0 0;
-margin: 0;
+padding: 2px 0;
 background: #efefef url(i/ui/input-search-bg.gif) left center repeat-x;
+}
+div#header-meta span.search-input input {
+border: 0 none;
 color: #666;
+width: 150px;
 font: normal normal normal 1em/normal Candara, "Trebuchet MS", Trebuchet, sans-serif;
+height: 16px; /* actual height is 22px, so subtract 3px for the padding done below*/
 }
 div#header-meta select {
 font: normal normal normal small/normal Candara, "Trebuchet MS", Trebuchet, sans-serif;
@@ -197,6 +208,7 @@ width: 190px;
 div#content-primary {
 border-bottom: 1px solid #999;
 padding: 10px 0;
+float: left;
 }
 
 /* primary */
@@ -206,7 +218,7 @@ width: 480px;
 margin-right: 20px;
 }
 div#primary h2.post-title { font: normal normal normal 1.6em/1.5em Candara, "Trebuchet MS", Trebuchet, sans-serif; }
-div#primary h2.post-title a { color: #4a4a4a;  text-decoration: none; }
+div#primary h2.post-title a { text-decoration: none; }
 div#primary h2.post-title a:hover { color: #000; }
 div#primary .more-post, div#primary .more-post a,
 div#primary .more-comment, div#primary .more-comment a {
@@ -222,16 +234,15 @@ div#primary .more-comment { float: right; padding-left: 20px; background: transp
 
 /* primary-content pages */
 div#content-primary .pages, div#content-primary .archive { width: 680px; }
-div#content-primary .pages .post { padding: 0 40px; }
+div#content-primary .pages .entry { padding: 0 40px; }
 div#content-primary .pages h2 {
-color: #666;
 font: normal normal normal 1.5em/1.5 Candara, "Trebuchet MS", Trebuchet, sans-serif;
 text-transform: uppercase;
 }
 
 /* primary-content archive */
 div#content-primary .archive .post { padding: 0 40px; }
-div#content-primary .archive h2 { color: #666; font: normal normal normal 1.5em/1.5 Candara, "Trebuchet MS", Trebuchet, sans-serif; }
+div#content-primary .archive h2 { font: normal normal normal 1.5em/1.5 Candara, "Trebuchet MS", Trebuchet, sans-serif; }
 
 /* primary-content archives */
 div#content-primary .archives {}
@@ -256,7 +267,7 @@ padding-left: 40px;
 margin: 0 0 5px 0;
 font: normal normal normal 1.6em/1.5em Candara, "Trebuchet MS", Trebuchet, sans-serif;
 }
-div#primary-single h2.post-title a { color: #4a4a4a; text-decoration: none; }
+div#primary-single h2.post-title a { text-decoration: none; }
 div#primary-single h2.post-title a:hover { color: #000; }
 div#primary-single .post-excerpt {
 background: #fcfcfc url(i/ui/excerpt-bg.gif) 0 0 no-repeat;
@@ -291,15 +302,14 @@ width: 180px;
 margin-right: 20px;
 background: #fff url(i/ui/tags-bg.gif) left bottom no-repeat;
 }
-div#secondary h2 {
-color: #4a4a4a;
-font: normal normal normal 1.6em/1.5em Candara, "Trebuchet MS", Trebuchet, sans-serif;
-}
+div#secondary h2 { font: normal normal normal 1.6em/1.5em Candara, "Trebuchet MS", Trebuchet, sans-serif; }
 div#secondary div#tags-container {
 height: 380px !important;
 text-align: justify;
+margin: 0;
+padding: 0;
 }
-div#secondary div#tags-container a { text-decoration: none; color: #999; padding: 2px; text-transform: lowercase; }
+div#secondary div#tags-container a { text-decoration: none; color: #666; padding: 0 2px; text-transform: lowercase; }
 div#secondary div#tags-container a:hover { text-decoration: underline; color: #000; }
 div#secondary .tags-footer {
 float: left;
@@ -327,7 +337,7 @@ font: normal normal normal xx-small/normal "Lucida Grande", "Lucida Sans Unicode
 
 /* tertiary */
 div#tertiary {
-float: left;
+float: right;
 width: 300px;
 }
 div#tertiary .ad-300x250, div#tertiary .ad-300x250 img, div#tertiary .ad-300x250 a, div#tertiary .ad-300x250 a img {
@@ -362,8 +372,8 @@ div#tertiary .more-ads a:hover {}
 div#content-secondary {}
 div#content-secondary .post {
 float: left;
-width: 320px;
-margin: 10px 12px 0 0; /* instead of worrying for the third column, just set it a little smaller - (320 x 3) + (12 x 3) = 996 */
+width: 300px;
+margin: 10px 16px 0 16px;
 border-bottom: 1px solid #ccc;
 text-align: justify;
 }
@@ -380,7 +390,6 @@ font: normal normal normal 1.2em/normal Corbel, Verdana, "Bitstream Vera Sans", 
 letter-spacing: -1px;
 padding: 4px 0;
 margin: 0 0 5px 0;
-color: #666;
 text-decoration: none;
 }
 div#content-secondary h2.post-title a:hover { color: #000; text-decoration: underline; }
@@ -420,7 +429,6 @@ div#content-secondary div#sec-col-B { width: 180px; }
 div#content-secondary div#sec-col-C { witdh: 300px; margin-right: 0; }
 
 div#content-secondary h2 {
-color: #666;
 font: normal normal normal 1.4em/normal Candara, "Trebuchet MS", Trebuchet, sans-serif;
 padding: 0;
 margin: 20px 0;
@@ -440,7 +448,7 @@ div#content-secondary span.srg_switcher a { text-decoration: none; }
 div#content-secondary span.srg_switcher a:hover, div#content-secondary span.srg_switcher a:focus { text-decoration: underline; }
 
 /* sigle post page */
-div#single { margin-top: 20px; border-bottom: 1px solid #ccc; }
+div#single { margin-top: 20px; }
 div#single div#single-entry { float: left; width: 680px; margin-right: 20px; }
 div#single div#single-entry .entry { padding-left: 40px; }
 
@@ -455,8 +463,12 @@ div#single p.social-icons img { border: 0 none; margin: 0 5px 0 0; padding: 0; }
 
 /* entry */
 .entry img { float: left; margin: 5px 10px 5px 0; border: 1px solid #999; padding: 4px; }
-.entry ul li { padding-left: 15px; background: url(i/icons/arrow-right-dotted.gif) left center no-repeat; }
+.entry ul { list-style: none; } .entry ul li { padding-left: 15px; background: url(i/icons/arrow-right-dotted.gif) 0 6px no-repeat; }
 .entry ol { padding-left: 20px; } .entry ol li { padding-left: 10px; }
+
+/* google search */
+.google-search { padding: 0 100px; }
+.google-search img { float: left; border: 0 none; padding: 0; margin: 0 10px 10px 0; }
 
 /* post and comments meta */
 div#single-entry-meta {}
@@ -469,20 +481,21 @@ div#single-entry-meta ul li, div#comments-meta ul li { padding-left: 15px; backg
 /* article styles
 \* ----------------------------------- ~o~ ----------------------------------- */
 /* figure */
-.figure { border-bottom: 1px dotted #ccc; }
-.figure img { margin: 0; padding: 0; border: 0 none; }
-.figure p { margin: 0; padding: 0; }
-.figure .credit { font-size: x-small; text-align: right; }
-.figure .credit cite { font-style: inherit; }
-.figure .caption { margin-bottom: 6px; }
-.figure .title { font-weight: bold; background: none; font-style: normal; }
-.figure .title:after { content: ": "; }
-div#primary .figure { height: 335px !important; }
-div#primary .figure img { width: 480px; } /* set a width for the home page - 480px */
-div#single .figure { width: 640px; } /* set the width for the single page - 640px */
-div#content-secondary .post-article .figure, /* do not display for the secondary content on the home page */
+.figure									{ border-bottom: 1px dotted #ccc; }
+.figure img							{ margin: 0; padding: 0; border: 0 none; }
+.figure p								{ margin: 0; padding: 0; }
+.figure .credit					{ font-size: x-small; text-align: right; }
+.figure .credit cite		{ font-style: inherit; }
+.figure .caption				{ margin-bottom: 6px; }
+.figure .title					{ font-weight: bold; background: none; font-style: normal; }
+.figure .title:after		{ content: ": "; }
+div#primary	.figure 		{ height: 335px !important; }
+div#primary	.figure img	{ width: 480px !important; } /* set a width for the home page - 480px */
+div#single	.figure img	{ width: 640px !important; } /* set the width for the single page - 640px */
+/* do not display for the secondary content on the home page */
+div#content-secondary .post-article .figure,
 div#content-primary .archive .figure
-{ display: none; }
+{ display: none; visibility: hidden; }
 
 /* wordpress specific */
 img.wp-smiley,
@@ -511,6 +524,9 @@ div#comments-body .comments-envelop, div#commentsform-envelop
 div#comments-body .alt {}
 div#comments-body .comments-details { float: left; width: 160px; margin-right: 20px; text-align: right; }
 div#comments-body .comments-content { float: right; width: 470px; }
+div#comments-body .comments-content ul { list-style: none; }
+div#comments-body .comments-content ul li { padding-left: 15px; background: url(i/icons/arrow-right-dotted.gif) 0 7px no-repeat; }
+div#comments-body .comments-content ol { padding-left: 20px; } div#comments-body .comments-content ol li { padding-left: 10px; }
 div#comments-body .comment-author { font-weight: bold; font-size: 1.2em; color: #4682B4; }
 div#comments-body .comment-author a { color: #4682B4; } div#comments-body .comment-author a:hover { color: #1E90FF; }
 div#comments-body .comments-details a { text-decoration: none; }
@@ -519,7 +535,8 @@ div#comments-body .comments-details a:hover { text-decoration: underline; }
 .nocomments {}
 
 /* gravatar for comments */
-.gravatar {}
+div#comments-body .comments-details img, div#comments-body .comments-details a img { clear: right; float: right; }
+.gravatar { border: 1px solid #333; margin: 0; padding: 2px; background: #fff; }
 /* gravatar for posts */
 .postgrav {}
 
@@ -531,10 +548,13 @@ form#commentform p { padding: 4px 0; }
 \* ----------------------------------- ~o~ ----------------------------------- */
 /* ad-icon */
 div#ad-icon {
-background: #fff url(i/ui/ad-icon-bg.gif) left bottom repeat-x;
+width: 1000px;
+background: #fff url(i/ui/pattern-bg.gif) left bottom repeat-x;
 height: 40px;
-margin-top: 10px;
+margin: 10px auto 1px auto;
 padding-top: 20px;
+text-align: left;
+clear: both;
 }
 div#ad-icon ul { 
 float:left;
@@ -547,83 +567,98 @@ float: left;
 margin: 0 5px 0 0;
 padding: 0;
 }
-div#nav a img {
+div#ad-icon img, div#ad-icon a img {
 display: block;
 text-decoration: none;
 border: 0 none;
+height: 16px; width: 16px;
 }
 
 /* footer */
+div#footer-wrapper { text-align: center; background: #1b2424; }
 div#footer {
-background: #515151;
-padding: 15px;
-color: #ccc;
+width: 1000px;
+margin: 0 auto;
+text-align: left;
+background: #1b2424 url(i/ui/footer-bg.gif) repeat-y;
+color: #fafafa;
 }
 div#footer h2 {
-color: #f5f5f5;
-text-transform: uppercase;
-font: normal normal normal 1.2em/normal Candara, "Trebuchet MS", Trebuchet, sans-serif;
-margin-bottom: 26px;
+color: #94b3c5;
+text-transform: lowercase;
+font: normal normal normal 1.4em/normal "Lucida Grande", "Lucida Sans Unicode", Verdana, Helvetica, Arial, sans-serif;
+margin: 10px 0 20px 0;
 }
+
+/* footer titles */
+div#footer h2.friends-family { background: #222d2d url(i/titles/friends-family.gif) left center no-repeat; }
+
 div#footer p, div#footer ul, div#footer ul li {
 font: normal normal normal 0.96em/1.4em Candara, "Trebuchet MS", Trebuchet, sans-serif;
+color: #c5bf9a;
 }
-div#footer a { text-decoration: underline; color: #ccc; }
-div#footer a:hover { text-decoration: underline; color: #fff; }
+div#footer a { text-decoration: underline; color: #f6f0cc; }
+div#footer a:hover { text-decoration: underline; color: #f2a412; }
 div#footer span.about-photo img {
 float: right;
 margin: 0 0 2px 6px;
 padding: 0;
 border: 4px solid #fff;
 }
-div#footer div#footer-col-A .asides-title { background: url(i/icons/tick-inv.gif) left center no-repeat; padding-left: 12px; }
-div#footer div#footer-col-A .asides-title a { color: #f5f5f5; }
-div#footer div#footer-col-A .date { font-size: x-small; border-left: 1px solid #fff; margin-left: 5px; padding-left: 5px; color: #f5f5f5; }
+div#footer div#footer-col-A {}
+div#footer div#footer-col-A .asides-title { background: url(i/icons/arrow-inv-star-rd.gif) 0 2px no-repeat; padding-left: 15px; }
+div#footer div#footer-col-A .asides-title a { color: #9aab07; }
+div#footer div#footer-col-A .date { font-size: x-small; border-left: 1px solid #718787; margin-left: 5px; padding-left: 5px; color: #718787; }
 div#footer div#footer-col-B ul { list-style-type: none; margin: 10px 2px; padding: 0; }
-div#footer div#footer-col-B ul li { background: url(i/icons/links-inv-01.gif) left center no-repeat; padding-left: 20px; }
+div#footer div#footer-col-B ul li { background: url(i/icons/arrow-inv-link-01.gif) left 6px no-repeat; padding-left: 20px; }
 div#footer .footer-more, div#footer .footer-more a,
 div#footer .footer-more-flickr, div#footer .footer-more-flickr a {
 text-decoration: underline;
 padding: 0 20px 0 0;
 margin: 10px 0;
-color: #f5f5f5;
 background: url(i/icons/arrow-inv-02.gif) right center no-repeat;
 }
-div#footer .footer-more-flickr, div#footer .footer-more-flickr a { background: url(i/icons/arrow-inv-flickr.gif) right center no-repeat; }
+div#footer-col-A, div#footer-col-B, div#footer-col-C, div#footer-col-D { float: left; margin-right: 10px; }
+div#footer-col-A { width: 220px; }
+div#footer-col-B { width: 186px; }
+div#footer-col-C { width: 316px; }
+div#footer-col-D { width: 240px; margin: 0; }
+div#footer-col-A p.asides { border-bottom: 1px dotted #d9a600; padding: 0 10px 10px 0; }
 
+div#footer .footer-more-flickr, div#footer .footer-more-flickr a { background: url(i/icons/arrow-inv-flickr.gif) right center no-repeat; }
 /* flickr photos */
 .flickr_badge_image img {
 float: left;
 position: relative;
-margin: 0 6px 6px 0;
+margin: 0 7px 7px 0;
 padding: 0;
 border: 1px solid #fff !important;
 width: 70px !important;
 height: 70px !important;
 }
 
-div#footer-col-A, div#footer-col-B, div#footer-col-C, div#footer-col-D { float: left; margin-right: 15px; }
-div#footer-col-A { width: 200px; }
-div#footer-col-B { width: 180px; }
-div#footer-col-C { width: 310px; }
-div#footer-col-D { width: 235px; margin: 0; }
-
 div#download-wp-theme {
 float: left;
-width: 235px;
-height: 80px !important;
 border: 0 none;
 margin: 10px 0;
 padding: 0;
-overflow: hidden;
 }
 div#download-wp-theme h4, div#download-wp-theme h4 a, div#download-wp-theme h4 a img {
 display: block;
 background: #515151 url(i/ui/download-theme.png) left center no-repeat;
 text-decoration: none;
 text-indent: -10000px;
+width: 235px !important;
 height: 80px !important;
+padding: 0; margin: 0;
 }
 
 /* copyright */
-div#copyright { padding: 20px 0; font: normal normal normal 0.90em/normal Corbel, Verdana, "Bitstream Vera Sans", sans-serif; }
+div#copyright {
+width: 1000px;
+margin: 1px auto 0 auto;
+padding: 30px 0;
+text-align: left;
+background: #fff url(i/ui/pattern-bg.gif) left top repeat-x;
+font: normal normal normal 0.90em/normal Corbel, Verdana, "Bitstream Vera Sans", sans-serif;
+}

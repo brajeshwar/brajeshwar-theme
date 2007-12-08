@@ -8,7 +8,6 @@
 				<p>Oops! it looks like I've lost the page you're looking for. Please try the <strong>Search</strong> or you can <a href="/contact/">contact</a> me.
 				You may also looking at the latest articles listed below.</p>
 			</div>
-			<?php endwhile; ?>			
 	</div><!-- /primary -->
 	
 	<div id="secondary">
@@ -22,7 +21,7 @@
 </div><!-- /content-primary -->
 
 <div id="content-secondary">
-	<?php if (have_posts()) : while (have_posts()) : the_post();
+	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 	<div class="post" id="post-<?php the_ID(); ?>">
 		<h2 class="post-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>"><?php title_excerpt('', '', true, '30') ?></a></h2>
 		<div class="post-article"><?php the_excerpt_reloaded(60, '<p></p><a></a><strong></strong><em></em>', 'excerpt', FALSE, 'more_link_text (depend on the prev value)', FALSE, 1, TRUE); ?></div>

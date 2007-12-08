@@ -9,6 +9,17 @@
 
 <!-- stylesheet(s) -->
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen, projection" />
+<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/styles-yshout.css" type="text/css" media="screen, projection">
+<!--[if IE]><link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/ie.css" type="text/css" media="screen, projection"><![endif]-->
+
+<!-- shout module -->
+<script src="http://www.brajeshwar.com/lib/yshout/js/jquery.js" type="text/javascript"></script>
+<script src="http://www.brajeshwar.com/lib/yshout/js/yshout.js" type="text/javascript"></script>
+<script type="text/javascript">
+	new YShout({
+		yPath: 'http://www.brajeshwar.com/lib/yshout/'
+	});
+</script>
 
 <!-- links -->
 <link rel="start" href="<?php bloginfo('url'); ?>" title="Home" />
@@ -29,13 +40,13 @@
 <div id="header">
 	<div id="notice">
 		<span class="title">Message from <?php bloginfo('name'); ?></span>
-		Still tweaking and tinkering with the new site design.
+		Still tweaking and tinkering with the new site design. If anything breaks, my email is brajeshwar (at) brajeshwar (d0t) com.
 	</div><!-- /notice -->
 
 	<div id="nav">
 		<ul>
 			<li<?php if (is_home()) { echo " class=\"current_page_item\""; } ?>><a href="<?php bloginfo('url'); ?>">Home</a></li>
-			<?php wp_list_pages('exclude=724,712,695&depth=1&sort_order=asc&exclude=44&title_li='); ?>
+			<?php wp_list_pages('exclude=695,712,724&depth=1&title_li='); ?>
 		</ul>
 	</div><!-- /nav -->
 
@@ -43,22 +54,24 @@
 		<div class="alignleft"><a href="<?php bloginfo('url'); ?>/subscribe/" title="Email & Other Subscriptions">Email & Other Subscriptions</a></div>
 		<div class="alignright rss-feed"><a href="<?php bloginfo('rss2_url'); ?>" title="Subscribe to the RSS Feed">RSS Feed</a></div>
 	</div><!-- /nav-right -->
-	<div class="clear"><!-- --></div>
 
 	<div id="title">
 		<h1><a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>" accesskey="1"><?php bloginfo('name'); ?></a></h1>
 	</div><!-- /title -->
 
 	<div id="header-meta">
-		<span class="hd-meta-attribute">Search</span><span class="hd-meta-value">
-			<form method="get" id="searchform" action="<?php bloginfo('url'); ?>/">
-				<label class="hide" for="s" >Search</label>
-				<span class="search-input-l"><!-- this is by far the best way I can come up with :-( --></span>
-				<span class="search-input"><input type="text" name="s" id="s" value="Type &amp; hit Enter _" onfocus="if (this.value == 'Type &amp; hit Enter _') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Type &amp; hit Enter _';}" />
-				<span class="search-input-r"></span>
-				<label class="hide" for="searchsubmit">Go</label>
-				<input class="hide" type="submit" id="searchsubmit" value="Search" />
-			</form>
+		<span class="hd-meta-attribute">Search</span><span class="hd-meta-value">			
+<!-- Google CSE Search Box Begins -->
+  <form id="searchbox_000948109368751561307:t5qc9nsxff0" action="http://www.brajeshwar.com/search/">
+    <input type="hidden" name="cx" value="000948109368751561307:t5qc9nsxff0" />
+    <input type="hidden" name="cof" value="FORID:10" />
+    <span class="search-input-l"><!-- this is by far the best way I can come up with :-( --></span>
+    <span class="search-input"><input type="text" name="q" id="s" /></span>
+    <span class="search-input-r"></span>
+    <input class="hide" type="submit" name="sa" value="Search" />
+  </form>
+  <script type="text/javascript" src="http://google.com/coop/cse/brand?form=searchbox_000948109368751561307%3At5qc9nsxff0"></script>
+<!-- Google CSE Search Box Ends -->				
 		</span>
 		<span class="hd-meta-attribute">Archives</span><span class="hd-meta-value">
 			<select id="archive-menu" name="archive-menu" onchange="document.location.href=this.options[this.selectedIndex].value;">
