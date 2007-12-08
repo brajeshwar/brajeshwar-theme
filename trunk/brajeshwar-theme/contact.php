@@ -14,6 +14,8 @@ Template Name: Contact Template
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>		
 			<div class="post">
 				<h2 class="post-title"><?php the_title(); ?></h2>
+				<p class="codeRed">Email me at brajeshwar (at) brajeshwar (d0t) com for now.
+				Don't use this contact system, looks there are some issues.</p>
 				<?php include(TEMPLATEPATH."/lib/gbcf/gbcf_form.php");?>
 			</div>			
 		<?php endwhile; ?>

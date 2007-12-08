@@ -11,7 +11,7 @@ Template Name: Tags Template
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>		
 			<div class="post">
 				<h2 class="post-title"><?php the_title(); ?></h2>
-				<ul><?php wp_tag_cloud('smallest=12&largest=30&unit=pt&number=0&format=list&orderby=name&order=ASC'); ?></ul>
+				<ul><?php wp_tag_cloud('smallest=10&largest=30&unit=pt&number=0&format=list&orderby=name&order=ASC'); ?></ul>
 			</div>			
 		<?php endwhile; ?>
 		<?php else : ?>		

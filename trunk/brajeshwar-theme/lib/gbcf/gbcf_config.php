@@ -149,6 +149,6 @@ $ip_blacklist = array( #########################################################
 ################################################################################
 
 // $form_location = "http://".$_SERVER['HTTP_HOST']."".@$_SERVER['REQUEST_URI']."";
-$form_location = "http://labs.brajeshwar.com/wp/contact";
+$form_location = "http://www.brajeshwar.com/wp/wp-content/themes/brajeshwar-8/lib/gbcf/";
 
 ############################################################################# ?>

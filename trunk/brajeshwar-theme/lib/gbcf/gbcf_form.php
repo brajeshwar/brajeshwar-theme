@@ -1,5 +1,4 @@
-
-<!-- BEGIN: UNIVERSAL FORM BODY, THIS IS WHAT'S "INCLUDED" -->
+<!-- BEGIN: UNIVERSAL FORM BODY, THIS IS WHAT IS "INCLUDED" -->
 <?php #########################################################
 // Secure and Accessible PHP Contact Form v.2.0 by Mike Cherim
 // There should be no need to edit anything in this file
@@ -337,4 +336,4 @@ if(@$showcredit == "yes") {
 }
      echo('</div><!-- END: Secure and Accessible PHP Contact Form '.$form_version.' by Mike Cherim (http://green-beast.com/) -->'."\n");
 ########################################################## ?>
-<!-- END: UNIVERSAL FORM BODY, THIS IS WHAT'S "INCLUDED" -->
+<!-- END: UNIVERSAL FORM BODY, THIS IS WHAT IS "INCLUDED" -->
