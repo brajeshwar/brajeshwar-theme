@@ -2,7 +2,7 @@
 
 <div id="content-primary">
 	<div id="primary">
-		<h2 class="post-title">404 - Not Found</h2> 
+		<h2 class="post-title"><span class="codeRed">404 - Not Found</span></h2> 
 			<div class="entry">
 				<img src="http://static.brajeshwar.com/wptheme-brajeshwar8-404/brajeshwar/" alt="404 - Not Found" width="460px" height="260px" border="0" />
 				<p>Oops! it looks like I've lost the page you're looking for. Please try the <strong>Search</strong> or you can <a href="/contact/">contact</a> me.

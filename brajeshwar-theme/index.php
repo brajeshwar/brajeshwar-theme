@@ -3,7 +3,7 @@
 <div id="content-primary">
 	<div id="primary">
 		<?php $my_query = new WP_Query('category_name=featured&showposts=1'); while ($my_query->have_posts()) : $my_query->the_post(); $do_not_duplicate = $post->ID; ?>
-		<h2 class="post-title" id="post-<?php the_ID(); ?>"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>"><?php title_excerpt('', '', true, '60') ?></a></h2> 
+		<h2 class="post-title" id="post-<?php the_ID(); ?>"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>"><?php title_excerpt('', '', true, '50') ?></a></h2> 
 			<div class="entry">
 				<?php the_content(''); ?>
 				<span class="more-post"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>">Read the article</a></span>
@@ -27,11 +27,9 @@
 	if( $post->ID == $do_not_duplicate ) continue; update_post_caches($posts); ?>
 	<div class="post" id="post-<?php the_ID(); ?>">
 		<h2 class="post-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>"><?php title_excerpt('', '', true, '30') ?></a></h2>
-		<div class="post-article"><?php the_excerpt_reloaded(40, '<p></p><a></a><strong></strong><em></em>', 'excerpt', FALSE, 'more_link_text (depend on the prev value)', FALSE, 1, TRUE); ?></div>
-		<p class="post-meta">Posted on <?php the_time('jS M, Y') ?> at <?php the_time('g:i a') ?> <?php edit_post_link('e_', ' | ', ''); ?>
-		<br />By <strong><?php the_author(); ?></strong> in <?php the_category(', ') ?></p>
-		<a class="more-post" href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>">Read the article</a>
-		<a class="more-comment" href=""><?php comments_number('no comments', 'one comment', '% comments' );?></a>
+		<div class="post-article"><?php the_excerpt_reloaded(50, '<p></p><a></a><strong></strong><em></em>', 'excerpt', FALSE, 'more_link_text (depend on the prev value)', FALSE, 1, TRUE); ?></div>
+		<span class="more-comments"><?php comments_popup_link('No Comments', '1 Comment', '% Comments' );?>,</span>
+		<span class="more-post"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>">Read the article</a></span>
 	</div>
 	<?php endwhile; endif; ?>
 	<div class="clear"><!--  --></div>

@@ -87,13 +87,27 @@
 	</div><!-- /comments-main -->
 	
 	<div id="comments-meta">
-		<p>So far,
-		<br />there are <strong><?php comments_number('No Comments','One Comment','% Comments'); ?></strong> to this article.</p>
-		<h5>Most commented article</h5>
-		<p>Still working on this one!</p>
-		<h5>Top commentors</h5>
-		<p>Still working on this one!</p>
-		<p>You can also just <a href="">email me</a> with your views, responses instead of commenting here!</p>
+		<p>So far,<br />
+		there <?php comments_number('are no comments', 'is only 1 comment', 'are % comments' );?> on this article.
+			<?php if (('open' == $post-> comment_status) && ('open' == $post->ping_status)) {
+			// Both Comments and Pings are open ?>
+			You can <a href="#respond">post yours</a>, or <a href="<?php trackback_url(); ?>" rel="trackback">trackback</a> from your own site.
+			<?php } elseif (!('open' == $post-> comment_status) && ('open' == $post->ping_status)) {
+			// Only Pings are Open ?>
+			Responses are currently closed, but you can <a href="<?php trackback_url(); ?> " rel="trackback">trackback</a> from your own site.				
+			<?php } elseif (('open' == $post-> comment_status) && !('open' == $post->ping_status)) {
+			// Comments are open, Pings are not ?>
+			You can <a href="#respond">post yours</a>. Pinging is currently not allowed.				
+			<?php } elseif (!('open' == $post-> comment_status) && !('open' == $post->ping_status)) {
+			// Neither Comments, nor Pings are open ?>
+			Both comments and pings are currently closed.
+			<?php } ?>
+		</p>			
+		<p>You can also just <a href="/contact/">email me</a> with your views, responses instead of commenting here!</p>
+		<p>Subscribe,<br />
+		<?php comments_rss_link(__('Comments RSS Feed', 'brajeshwar')); ?>
+		to this article.
+		</p>
 	<div class="clear"><!-- /clear; brajeshwar.com --></div>
 	</div><!-- /comments-meta -->
 </div><!-- /comments-wrapper -->
