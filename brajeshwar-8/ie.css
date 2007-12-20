@@ -1,0 +1,45 @@
+/* -------------------------------------------------------------- 
+   
+   ie.css
+   
+   Contains every hack for Internet Explorer versions prior 
+   to IE7, so that our core files stay sweet and nimble.
+   
+-------------------------------------------------------------- */
+
+/* Make sure the layout is centered in IE5 */
+body        { text-align: center; }
+.wrapper  { text-align: left; }
+
+
+/* This fixes the problem where IE6 adds an extra 3px margin to
+   two columns that are floated up against each other. */
+
+* html .alignleft,
+* html .alignright,
+* html div#nav,
+* html div#nav-right,
+* html div#title,
+* html div#header-meta,
+* html div#primary, div#primary-single,
+* html div#secondary,
+* html div#tertiary,
+* html div#content-secondary,
+* html div#content-secondary div#sec-col-A, div#content-secondary div#sec-col-B, div#content-secondary div#sec-col-C,
+* html div#comments-main, div#comments-meta,
+* html div#footer-col-A, div#footer-col-B, div#footer-col-C, div#footer-col-D
+{ overflow-x: hidden; } /* IE6 fix */
+
+* html div#content-secondary .post {display:inline;}  /* fix 'double margin' bug - IE6 only */
+
+div#footer, div.comments-envelop { zoom: 1; } /* needed to contain the floated descendants */
+
+ul, ol {
+  position: relative; /* Keeps IE6 from cutting pulled/pushed images */
+}
+
+/* Fixes incorrect styling of legend in IE6 fieldsets. */
+legend { margin-bottom:1.4em; }
+
+/* Fixes incorrect placement of numbers in ol's in IE6/7 */
+ol { margin-left:2em; }
