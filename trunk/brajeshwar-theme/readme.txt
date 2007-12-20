@@ -10,7 +10,7 @@ Easy steps to install a Wordpress Theme.
 3. Go to Wordpress Admin > Presentation > Select the Theme
 __________________________________________________________________________________
 DETAILED README
-Include Downloads, Changelogs, To-Do Items, Bugs, Plugins test and everything else
+Include Working/Final SVN Repository location, Downloads, Changelogs, To-Do Items, Bugs, Plugins test and everything else
 
 http://code.google.com/p/brajeshwar-theme/
 http://theme.brajeshwar.com/
