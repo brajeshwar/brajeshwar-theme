@@ -40,7 +40,9 @@
 <div id="header">
 	<div id="notice">
 		<span class="title">Message from <?php bloginfo('name'); ?></span>
-		Still tweaking and tinkering with the new site design. If anything breaks, my email is brajeshwar (at) brajeshwar (d0t) com.
+		<?php if (function_exists('twitter_messages')) {
+			// twitter_messages("username", msgs, list, timestamp, linked);
+			twitter_messages("Brajeshwar", 1, false, true, false); }?>
 	</div><!-- /notice -->
 
 	<div id="nav">

@@ -6,9 +6,9 @@
 		<div class="post" id="post-<?php the_ID(); ?>">
 			<h2 class="post-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
 			<div class="post-excerpt">
-				<?php the_excerpt_reloaded(55, '<a><em><strong>', 'excerpt', FALSE, 'Valid only for TRUE in prev value', FALSE, 1, TRUE); ?>
+				<?php the_excerpt_reloaded(50, '<a><em><strong>', 'excerpt', FALSE, 'Valid only for TRUE in prev value', FALSE, 1, TRUE); ?>
 			</div><!-- /post-excerpt -->
-			<span class="excerpt-footer"><a href="#content-secondary">Article continues</a></span>
+			<span class="excerpt-footer"><a href="#post-starts">Article continues</a></span>
 			<div class="clear"><!-- /clear; brajeshwar.com --></div>
 			<div id="post-ad-top">
 				<script type="text/javascript"><!--
@@ -39,6 +39,7 @@
 	<div id="single">
 		<div id="single-entry">
 			<div class="entry">
+				<a id="post-starts"></a>
 				<?php the_content(''); ?>
 				<?php edit_post_link('Edit this entry','<p class="more-edit">','</p>'); ?>
 			</div><!-- /entry -->
@@ -58,9 +59,7 @@
 				<p class="social-icons">
 					<a href="http://www.mixx.com/" onclick="window.location='http://www.mixx.com/submit?page_url='+window.location; return false;" title="Add to Mixx!"><img src="<?php bloginfo('template_directory'); ?>/i/iconsocial/mixx.png" alt="Add to Mixx!" /></a>	
 					<a href="http://del.icio.us/post?url=<?php the_permalink() ?>&title=<?php the_title(); ?>" title="Add to Del.icio.us"><img src="<?php bloginfo('template_directory'); ?>/i/iconsocial/delicious_32x32.png" alt="Add to Del.icio.us" /></a>
-					<a href="http://www.newsvine.com/_tools/seed&save?u=<?php the_permalink() ?>&h=<?php the_title(); ?>" title="Add to Newsvine"><img src="<?php bloginfo('template_directory'); ?>/i/iconsocial/Newsvine_32x32.png" alt="Add to Newsvine" /></a>
-					<a href="http://blinklist.com/index.php?Action=Blink/addblink.php&Url=<?php the_permalink() ?>&Title=<?php the_title(); ?>" title="Add to Blinlist"><img src="<?php bloginfo('template_directory'); ?>/i/iconsocial/Blinklist_32x32.png" alt="Add to Blinklist" /></a>
-					<a href="http://reddit.com/submit?url=<?php the_permalink() ?>&title=<?php the_title(); ?>" tite="Add to Reddit"><img src="<?php bloginfo('template_directory'); ?>/i/iconsocial/Reddit_32x32.png" alt="Reddit" /></a>
+					<a href="http://reddit.com/submit?url=<?php the_permalink() ?>&title=<?php the_title(); ?>" title="Add to Reddit"><img src="<?php bloginfo('template_directory'); ?>/i/iconsocial/Reddit_32x32.png" alt="Reddit" /></a>
 					<a href="http://technorati.com/faves?add=<?php the_permalink() ?>" title="Add to Technorati Favorites"><img src="<?php bloginfo('template_directory'); ?>/i/iconsocial/technorati_32x32.png" alt="Technorati" /></a>
 					<a href="http://www.stumbleupon.com/submit?url=<?php the_permalink() ?>&title=<?php the_title(); ?>" title="Add to Stumbleupon"><img src="<?php bloginfo('template_directory'); ?>/i/iconsocial/Stumbleupon_32x32.png" alt="Add to Stumbleupon" /></a>
 				</p>
@@ -71,34 +70,14 @@
 			<p>Posted on <?php the_time('jS M, Y') ?> at <?php the_time('g:i a') ?>
 			<br />Filed in <?php the_category(', ') ?></p>			
 			<h5>Author</h5>
-			<p><a href="<?php the_author_url(); ?> "><?php the_author_nickname(); ?></a>, <?php the_author_description(); ?></p>
-			<h5>Comments</h5>
-			<p>There are currently <?php comments_number('no comments', 'one comment', '% comments' );?> on this article.
-				<?php if (('open' == $post-> comment_status) && ('open' == $post->ping_status)) {
-				// Both Comments and Pings are open ?>
-				You can <a href="#respond">leave a response</a>, or <a href="<?php trackback_url(); ?>" rel="trackback">trackback</a> from your own site.				
-				<?php } elseif (!('open' == $post-> comment_status) && ('open' == $post->ping_status)) {
-				// Only Pings are Open ?>
-				Responses are currently closed, but you can <a href="<?php trackback_url(); ?> " rel="trackback">trackback</a> from your own site.				
-				<?php } elseif (('open' == $post-> comment_status) && !('open' == $post->ping_status)) {
-				// Comments are open, Pings are not ?>
-				You can skip to the end and <a href="#respond">leave a response</a>. Pinging is currently not allowed.				
-				<?php } elseif (!('open' == $post-> comment_status) && !('open' == $post->ping_status)) {
-				// Neither Comments, nor Pings are open ?>
-				Both comments and pings are currently closed.
-				<?php } ?>
-			</p>			
+			<p><a href="<?php the_author_url(); ?> "><?php the_author(); ?></a>, <?php the_author_description(); ?></p>
 			<p><?php the_tags('<h5>Tags</h5>', ', ', ''); ?></p>
 			
 			<h5>Endorsements</h5>
 			<a href="http://www.teknopoint.info/" title="Teknopoint Multimedia - The ultimate in Adobe Technologies Training in India"><img src="http://media.brajeshwar.com/i/ads/teknopoint-260x100.png" alt="Teknopoint Multimedia - The ultimate in Adobe Technologies Training in India" style="border: 0 none; height: 100px; width: 260px;" /></a>
 			
-			<h5>Links found in this Article</h5>
-			<p>Will someone please suggest me how to do this one?</p>
 			<h5>Related Articles</h5>
 			<ul><?php related_posts(); ?></ul>
-			<h5>Popular Articles</h5>
-			<p>Will someone please suggest me how to do this one?</p>
 			<h5>Do More</h5>
 			<ul>
 				<li>Stumble on a <a href="<?php bloginfo('url'); ?>/?random">Random Article</a></li>

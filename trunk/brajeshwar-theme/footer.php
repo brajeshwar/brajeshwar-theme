@@ -1,9 +1,5 @@
 <div class="clear"><!-- /clear all --></div>
 </div><!-- END: wrapper (DIV started in header.php) -->
-<div id="ad-icon">
-	<ul><?php wp_list_bookmarks('categorize=0&category=291&show_images=1&show_description=0&orderby=rand&limit=50&title_li'); ?></ul>
-</div><!-- /ad-icon -->
-
 <div id="footer-wrapper">
 	<div id="footer">
 		<div id="footer-col-A">
@@ -21,8 +17,6 @@
 			<ul><?php wp_list_bookmarks('categorize=0&category=12,292&show_images=0&show_description=0&orderby=rand&limit=20&title_li'); ?></ul>
 			<h2><?php _e('Links &amp; Resources'); ?></h2>
 			<ul><?php wp_list_bookmarks('categorize=0&category=13&show_images=0&show_description=0&orderby=rand&title_li'); ?></ul>
-			<h2><?php _e('Misc Links'); ?></h2>
-			<ul><?php wp_list_bookmarks('categorize=0&category=293&show_images=0&show_description=0&orderby=name&title_li'); ?></ul>			
 			<p>More <a href="" class="footer-more">links</a> (coming soon)</p>
 		</div><!-- /footer-col-B -->
 	
@@ -38,7 +32,7 @@
 			<h2><?php _e('Brajeshwar'); ?></h2>
 			<p>
 			<span class="about-photo"><img src="<?php bloginfo('template_directory'); ?>/i/ui/brajeshwar.jpg" alt="Brajeshwar" /></span>
-			My name is Brajeshwar and I run this site.
+			My name is Brajeshwar and this is my site.
 			</p>
 			<p>
 			I firmly believe in keeping things simple and I envison pushing the technical envelop
@@ -67,7 +61,7 @@
 			?>
 			<p>
 			<?php printf(__('Brajeshwar.com has %1$s and %2$s, contained within %3$s and %4$s.'), $post_str, $comm_str, $cat_str, $tag_str); ?>
-			This site is in operation since <strong>11th June, 2001</strong> and the first article appeared on <strong>15th May, 2002</strong>.</p>
+			This site is in operation since 11th June, 2001 and the first article appeared on 15th May, 2002.</p>
 			<p><?php wp_register('', ' | '); ?><?php wp_loginout(); ?><?php wp_meta(); ?></p>
 		</div><!-- /footer-col-D -->
 		<div class="clear"><!--  --></div>
@@ -76,10 +70,16 @@
 
 <div id="copyright">
 	<p>
-		Copyright 2001-<?php echo date('Y');?> &copy; <?php bloginfo('name'); ?> |
+		All articles and comments &copy; their original owners.
+		The design, idea and everything else is &copy; <?php bloginfo('name'); ?>, 2001-<?php echo date('Y');?>.
+		Quotes, excerpts or reproduction of any of the article is possible solely under the 
+		<a href="http://creativecommons.org/licenses/by-nc-nd/3.0/" title="Attribution-Noncommercial-No Derivative">Attribution-Noncommercial-No Derivative</a> License.
+		<?php bloginfo('name'); ?> is powered by <a href="http://wordpress.org/" title="Wordpress">Wordpress</a>.
+	</p>
+	<p>		
 		Subscribe to feeds -
-		<a href="<?php bloginfo_rss('rss2_url'); ?>" title="Articles (RSS)">Articles</a>
-		or <a href="<?php bloginfo_rss('comments_rss2_url'); ?>" title="Comments (RSS)">Comments</a>
+		<a href="<?php bloginfo_rss('rss2_url'); ?>" title="Articles (RSS)">All Articles</a>
+		or <a href="<?php bloginfo_rss('comments_rss2_url'); ?>" title="Comments (RSS)">All Comments</a>
 	</p>
 </div><!-- /copyright -->
 <div class="clear"><!-- /clear all --></div>

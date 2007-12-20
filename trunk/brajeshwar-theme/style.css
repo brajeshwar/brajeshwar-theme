@@ -17,6 +17,17 @@ CREDITS AND THANKS
 # Blueprint CSS Framework - http://code.google.com/p/blueprintcss/
 # WebSiteIcons - http://www.websiteicons.com/
 
+COLOR
+
+DARK, BLACK DEFAULTS
+	body text - #333
+	
+GREEN, HIGHLIGHT, QUOTES
+	text body - #308014 (sapgreen)
+	text links - #00cd00 (green light)
+	text links hover - #006400 (darkgreen)
+	related, misc - #f0fff0 (honeydew)
+
 */
 
 /* blueprint framework sans the grid */
@@ -26,8 +37,8 @@ CREDITS AND THANKS
 a { color: #333; text-decoration: underline; }
 a:focus, a:hover { color: #000; }
 em { background: none; }
-blockquote { color: #919191; background: #fcfcfc; padding: 5px 10px 5px 20px; border-left: 4px solid #F0F0F0; }
-blockquote blockquote { color: #999; background: #fff; }
+blockquote { color: #308014; background: #f0fff0; padding: 5px 20px; border-left: 4px solid #006400; border-right: 1px dotted #006400; }
+blockquote a { color: #00cd00; } blockquote a:hover { color: #006400; }
 blockquote:before, .entry q:before { content: ""; }
 blockquote:after, .entry q:after { content: ""; }
 
@@ -71,14 +82,22 @@ background: #fafbfc url(i/ui/notice-bg.gif) bottom left repeat-x;
 font: normal normal normal x-small/normal "Lucida Grande", "Lucida Sans Unicode", Verdana, Helvetica, Arial, sans-serif;
 color: #999;
 }
-div#notice .title {
+div#notice a { color: #999; text-decoration: underline; }
+div#notice a:hover { color: #333; text-decoration: underline; }
+div#notice span.title {
 background: url(i/icons/arrow-01.gif) right center no-repeat;
 padding-right: 15px;
 margin-right: 20px;
 font-weight: bold;
 }
-div#notice a { color: #999; text-decoration: underline; }
-div#notice a:hover { color: #333; text-decoration: underline; }
+/* twitter */
+ul.twitter {}
+li.twitter-item {}
+p.twitter-message {}
+span.twitter-timestamp { padding-left: 5px; }
+span.twitter-timestamp:before { content: "- updated "; }
+span.twitter-timestamp:after { content: " via Twitter."; }
+a.twitter-link {}
 
 /* nav */
 div#nav {
@@ -208,6 +227,7 @@ width: 190px;
 div#content-primary {
 border-bottom: 1px solid #999;
 padding: 10px 0;
+margin-bottom: 20px;
 float: left;
 }
 
@@ -274,7 +294,7 @@ background: #fcfcfc url(i/ui/excerpt-bg.gif) 0 0 no-repeat;
 padding: 15px 0 5px 40px;
 border-bottom: 1px dotted #fcfcfc;
 text-align: justify;
-height: 90px;
+height: 80px;
 overflow: hidden;
 }
 div#primary-single .post-excerpt p { margin: 0; padding: 0; }
@@ -287,10 +307,12 @@ background: #fff url(i/icons/arrow-down-up.gif) 0 70% no-repeat;
 div#primary-single span.excerpt-footer a { color: #000; }
 div#primary-single div#post-ad-top {
 padding-left: 40px;
-height: 255px !important;
 overflow: hidden;
-background: url(i/ui/google-adsense-vertical.gif) 100% 100% no-repeat;
+margin-top: -25px;
+width: 340px;
+background: transparent;
 }
+.post-ad-mid { float: right; width: 300px; height: 250px; margin: 0 0 10px 10px; padding: 0; }
 .more-edit { margin: 20px 0; }
 .more-edit a { font-weight: bold; padding-right: 15px; background: url(i/icons/edit-pencil.gif) 100% 60% no-repeat; color: #008B00; }
 .more-edit a:hover { color: #00CD00; }
@@ -373,18 +395,17 @@ div#content-secondary {}
 div#content-secondary .post {
 float: left;
 width: 300px;
-margin: 10px 16px 0 16px;
+margin: 10px 16px;
+padding-bottom: 5px;
 border-bottom: 1px solid #ccc;
 text-align: justify;
+color: #666;
 }
 div#content-secondary .post-article {
 height: 120px !important;
 overflow: hidden;
 margin-bottom: 10px;
 }
-div#content-secondary .post a {}
-div#content-secondary .post a:hover {}
-div#content-secondary .post-meta { color: #333; }
 div#content-secondary h2.post-title, div#content-secondary h2.post-title a {
 font: normal normal normal 1.2em/normal Corbel, Verdana, "Bitstream Vera Sans", sans-serif;
 letter-spacing: -1px;
@@ -398,18 +419,16 @@ font: normal normal normal 1em/1.4em "Lucida Grande", "Lucida Sans Unicode", Ver
 padding: 2px 0;
 margin: 2px 0;
 }
-div#content-secondary .more-post, div#content-secondary .more-post a,
-div#content-secondary .more-comment, div#content-secondary .more-comment a {
+div#content-secondary span.more-post, div#content-secondary span.more-post a,
+div#content-secondary span.more-comments, div#content-secondary span.more-comments a {
 margin: 6px 0;
 padding: 0;
-text-decoration: underline;
-text-transform: lowercase;
+text-decoration: none;
 color: #333;
+text-transform: lowercase;
 }
-div#content-secondary .more-post, div#content-secondary .more-post a
-{ float: left; padding-right: 20px; background: transparent url(i/icons/arrow-02.gif) 100% 60% no-repeat; }
-div#content-secondary .more-comment, div#content-secondary .more-comment a
-{ float: right; padding-left: 20px; background: transparent url(i/icons/post-comments.gif) 0 60% no-repeat; }
+div#content-secondary span.more-post a:hover, div#content-secondary span.more-comments a:hover { text-decoration: underline; color: #00f; }
+div#content-secondary span.more-post { padding-right: 15px; background: transparent url(i/icons/arrow-right-dotted.gif) right center no-repeat; }
 
 div#post-nav {
 text-align: center;
@@ -455,7 +474,7 @@ div#single div#single-entry .entry { padding-left: 40px; }
 div#single div#social-activity { margin-top: 20px; color: #104e8b; }
 div#single div#social-activity a { color: #104e8b; }
 div#single div#social-activity a:hover { color: #1C86EE; }
-div#single div#single-entry-meta { float: left; width: 260px; }
+div#single div#single-entry-meta { float: left; width: 260px; border-left: 1px solid #f0f0f0; padding-left: 10px; }
 div#single div#social-digg { float: right; margin-left: 20px; }
 div#single span.social-bookmark { padding-right: 20px; background: url(i/icons/arrow-01.gif) right center no-repeat; }
 div#single p.social-icons { padding-top: 6px; float: right; }
@@ -472,7 +491,6 @@ div#single p.social-icons img { border: 0 none; margin: 0 5px 0 0; padding: 0; }
 
 /* post and comments meta */
 div#single-entry-meta {}
-div#comments-meta {}
 div#single-entry-meta h5, div#comments-meta h5 { color: #333; font-size: small; margin-top: 16px; font-weight: normal; }
 div#single-entry-meta h5.top, div#comments-meta h5.top { margin-top: 0; }
 div#single-entry-meta ul, div#comments-meta ul { padding-left: 10px; margin: 0; }
@@ -491,6 +509,7 @@ div#single-entry-meta ul li, div#comments-meta ul li { padding-left: 15px; backg
 .figure .title:after		{ content: ": "; }
 div#primary	.figure 		{ height: 335px !important; }
 div#primary	.figure img	{ width: 480px !important; } /* set a width for the home page - 480px */
+div#single	.figure			{ margin-bottom: 10px; }
 div#single	.figure img	{ width: 640px !important; } /* set the width for the single page - 640px */
 /* do not display for the secondary content on the home page */
 div#content-secondary .post-article .figure,
@@ -509,9 +528,9 @@ margin: 0;
 	
 /* comments
 \* ----------------------------------- ~o~ ----------------------------------- */
-div#comments-wrapper { padding: 20px 0; }
+div#comments-wrapper { padding: 20px 0; border-top: 1px solid #999; margin-top: 5px; }
 div#comments-main { float: left; width: 650px; margin-right: 50px; }
-div#comments-meta { float: left; width: 300px; }
+div#comments-meta { float: left; width: 270px; border-left: 1px solid #f0f0f0; padding-left: 10px; }
 
 div#comments-body {}
 div#comments-body h3, div#commentsform-envelop h3
@@ -536,7 +555,7 @@ div#comments-body .comments-details a:hover { text-decoration: underline; }
 
 /* gravatar for comments */
 div#comments-body .comments-details img, div#comments-body .comments-details a img { clear: right; float: right; }
-.gravatar { border: 1px solid #333; margin: 0; padding: 2px; background: #fff; }
+.gravatar { margin: 0; padding: 0; border: 0 none; }
 /* gravatar for posts */
 .postgrav {}
 
@@ -573,6 +592,7 @@ text-decoration: none;
 border: 0 none;
 height: 16px; width: 16px;
 }
+div#ad-icon ul li.ad-icon-here { padding-left: 15px; margin-left: 20px; background: url(i/icons/arrow-left-01.gif) left center no-repeat; }
 
 /* footer */
 div#footer-wrapper { text-align: center; background: #1b2424; }
