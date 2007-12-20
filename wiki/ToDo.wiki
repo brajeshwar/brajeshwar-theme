@@ -1,10 +1,6 @@
-#labels todo,enhancements,Featured
-= Introduction =
+#labels enhancements,Featured
+=Brajeshwar v8.0.0=
 
-Let us list the things that we have to do for the theme including but not limited to enhancements, optimization etc.
-
-
-= Details =
-
-  * Widget Ready
-  * Google Adsense should be customizable from the Admin Panel (Publisher ID and Channels)
+  * Widget
+  * Google Adsense Options
+  * Theme Option
