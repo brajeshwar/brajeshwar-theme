@@ -33,7 +33,9 @@ $websitename = get_bloginfo('name'); #sets the blog's name, according to wordpre
 	$failuremess .= "It wasn't their fault, so try fixing it.  
   They came from ".$_SERVER['HTTP_REFERER'];
 	// uncomment the next link if you the admin to be emailed of 404 errors (it will be too many mails for a high traffic site, I hated that with my site at http://www.brajeshwar.com/)
-	// mail($adminemail, "Bad Link To ".$_SERVER['REQUEST_URI'], $failuremess, "From: $websitename <wordpress@$website>");
+	if(ragnu('errormail')) {
+		mail($adminemail, "Bad Link To ".$_SERVER['REQUEST_URI'], $failuremess, "From: $websitename <wordpress@$website>");
+	}
 	$casemessage = "An administrator has been emailed about this problem.";#set a friendly message
   }
   echo " ".$website.$_SERVER['REQUEST_URI']; ?> 

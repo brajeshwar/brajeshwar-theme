@@ -1,3 +1,4 @@
+<?php include_once(dirname(__FILE__) . '/functions.php'); ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" <?php language_attributes(); ?>>
 <head>
@@ -5,10 +6,9 @@
 <title><?php wp_title(' '); ?><?php if(wp_title(' ', false)) { echo ' - '; } ?><?php bloginfo('name'); ?></title>
 
 <!-- metas -->
-<meta name="keywords" content="brajeshwar, design, wordpress, theme" /><!-- feel free to change this to reflect your site -->
+<meta name="keywords" content="<?php ragnu('keywords'); ?>" />
 <meta name="Description" content="<?php bloginfo('description'); ?>" />
 <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
-<meta name="generator" content="WordPress <?php bloginfo('version'); ?>" />
 
 <!-- start IE specific metas -->
 <meta content="off" name="autosize" />
@@ -25,7 +25,6 @@
 
 <!-- favicon -->
 <link href="<?php bloginfo('url'); ?>/favicon.ico"  type="image/x-icon" rel="icon" />
-<link href="<?php bloginfo('url'); ?>/favicon.ico" type="image/x-icon" rel="shortcut icon" />
 
 <?php wp_head(); ?>
 </head>
