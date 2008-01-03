@@ -1,5 +1,13 @@
 <div class="clear"><!-- /clear all --></div>
 </div><!-- END: wrapper (DIV started in header.php) -->
+<div id="footer-top">
+	<a href="http://www.teknopoint.info/" title="Teknopoint Multimedia - The ultimate in Adobe Technologies Training in India">
+	<img
+		src="http://www.brajeshwar.com/media/i/ads/teknopoint-486x60.jpg"
+		alt="Teknopoint Multimedia - The ultimate in Adobe Technologies Training in India"
+		style="width: 486px; height: 60px; border: 1px solid #999;" />
+	</a>
+</div><!-- /footer-top -->
 <div id="footer-wrapper">
 	<div id="footer">
 		<div id="footer-col-A">
@@ -66,9 +74,9 @@
 		</div><!-- /footer-col-D -->
 		<div class="clear"><!--  --></div>
 	</div><!-- /footer -->
-</div>
+</div><!-- /footer-wrapper -->
 
-<div id="copyright">
+<div id="footer-btm">
 	<p>
 		All articles and comments &copy; their original owners.
 		The design, idea and everything else is &copy; <?php bloginfo('name'); ?>, 2001-<?php echo date('Y');?>.
@@ -81,8 +89,7 @@
 		<a href="<?php bloginfo_rss('rss2_url'); ?>" title="Articles (RSS)">All Articles</a>
 		or <a href="<?php bloginfo_rss('comments_rss2_url'); ?>" title="Comments (RSS)">All Comments</a>
 	</p>
-</div><!-- /copyright -->
-<div class="clear"><!-- /clear all --></div>
+</div><!-- /footer-btm -->
 <?php wp_footer(); ?>
 </body>
 </html>
