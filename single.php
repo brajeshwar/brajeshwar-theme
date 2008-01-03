@@ -32,8 +32,9 @@
 	<div id="tertiary">
 		<?php include(TEMPLATEPATH."/inc/ads-prm.php");?>
 	</div><!-- /tertiary -->
+	<div class="clear"><!-- /yeah, we're done with the primary content --></div>
 </div><!-- /content-primary -->
-<div class="clear"><!-- /yeah, we're done with the primary content --></div>
+
 <div id="content-secondary">
 	<div id="single">
 		<div id="single-entry">
@@ -71,7 +72,10 @@
 			<h5>Author</h5>
 			<p><a href="<?php the_author_url(); ?> "><?php the_author(); ?></a>, <?php the_author_description(); ?></p>
 			<p><?php the_tags('<h5>Tags</h5>', ', ', ''); ?></p>
-						
+			
+			<h5>Endorsements</h5>
+			<a href="http://www.teknopoint.info/" title="Teknopoint Multimedia - The ultimate in Adobe Technologies Training in India"><img src="http://media.brajeshwar.com/i/ads/teknopoint-260x100.png" alt="Teknopoint Multimedia - The ultimate in Adobe Technologies Training in India" style="border: 0 none; height: 100px; width: 260px;" /></a>
+			
 			<h5>Related Articles</h5>
 			<ul><?php related_posts(); ?></ul>
 			<h5>Do More</h5>

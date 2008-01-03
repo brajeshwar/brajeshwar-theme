@@ -22,7 +22,7 @@
 		
 		<div id="comments-body">
 		<?php if ($comments) : ?>
-			<h3 id="comments">Comments <span class="comments-add"><a href="#respond">post yours</a></span></h3>
+			<h3 id="comments">Comments <span class="comments-add"><a href="">post yours</a></span></h3>
 				<?php foreach ($comments as $comment) : ?>
 				<div class="comments-envelop <?php echo $oddcomment; ?>" id="comment-<?php comment_ID() ?>">
 					<p class="comments-details">
@@ -108,6 +108,6 @@
 		<?php comments_rss_link(__('Comments RSS Feed', 'brajeshwar')); ?>
 		to this article.
 		</p>
-	</div><!-- /comments-meta -->
 	<div class="clear"><!-- /clear; brajeshwar.com --></div>
+	</div><!-- /comments-meta -->
 </div><!-- /comments-wrapper -->

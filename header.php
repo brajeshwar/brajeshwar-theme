@@ -42,7 +42,7 @@
 		<span class="title">Message from <?php bloginfo('name'); ?></span>
 		<?php if (function_exists('twitter_messages')) {
 			// twitter_messages("username", msgs, list, timestamp, linked);
-			twitter_messages("Brajeshwar", 1, false, true, "Via Twitter", true, true); }?>
+			twitter_messages("Brajeshwar", 1, false, true, false); }?>
 	</div><!-- /notice -->
 
 	<div id="nav">

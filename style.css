@@ -1,10 +1,13 @@
 /*
 Theme Name: Brajeshwar
 Theme URI: http://theme.brajeshwar.com/
-Description: Content focused, usability enhanced yet simple, crisp, clear and light. Details, Preview and latest release downloads are available at the <a href="http://theme.brajeshwar.com/" title="Brajeshwar Theme">theme's website</a>. Visit the <a href="http://www.brajeshwar.com/" title="Brajeshwar">Author's site</a> from where this theme got its inspiration.
 Version: v8.0.0
 Author: Brajeshwar
 Author URI: http://www.brajeshwar.com/
+Description:
+<p>Content focused, usability enhanced yet simple, crisp, clear and light.</p>
+<p>Details, Preview and latest release downloads are available at the <a href="http://theme.brajeshwar.com/" title="Brajeshwar Theme">theme's website</a>.
+</p><p>Visit the <a href="http://www.brajeshwar.com/" title="Brajeshwar">Author's site</a> from where this theme got its inspiration.</p>
 
 Provided under the GNU General Public Licence v3.0
 http://www.gnu.org/licenses/gpl-3.0.txt
@@ -51,6 +54,7 @@ blockquote:after, .entry q:after { content: ""; }
 .codeBlue,
 .clrblue			{ color: blue; }
 
+
 /* ui layout and design
 \* ----------------------------------- ~o~ ----------------------------------- */
 html, body {
@@ -71,19 +75,19 @@ div#header {}
 
 /* notice */
 div#notice {
-padding: 16px 2px 20px 2px;
+padding: 15px 0 20px 0;
 margin-bottom: 30px;
 overflow: hidden;
-background: #f0fff0 url(i/ui/notice-bg.gif) bottom left repeat-x;
+background: #fafbfc url(i/ui/notice-bg.gif) bottom left repeat-x;
 font: normal normal normal x-small/normal "Lucida Grande", "Lucida Sans Unicode", Verdana, Helvetica, Arial, sans-serif;
-color: #308014;
+color: #999;
 }
-div#notice a { color: #00cd00; text-decoration: underline; }
-div#notice a:hover { color: #006400; text-decoration: underline; }
+div#notice a { color: #999; text-decoration: underline; }
+div#notice a:hover { color: #333; text-decoration: underline; }
 div#notice span.title {
 background: url(i/icons/arrow-01.gif) right center no-repeat;
-padding-right: 10px;
-margin-right: 15px;
+padding-right: 15px;
+margin-right: 20px;
 font-weight: bold;
 }
 /* twitter */
@@ -91,8 +95,8 @@ ul.twitter {}
 li.twitter-item {}
 p.twitter-message {}
 span.twitter-timestamp { padding-left: 5px; }
-span.twitter-timestamp:before { content: ""; }
-span.twitter-timestamp:after { content: ""; }
+span.twitter-timestamp:before { content: "- updated "; }
+span.twitter-timestamp:after { content: " via Twitter."; }
 a.twitter-link {}
 
 /* nav */
@@ -149,15 +153,11 @@ background: url(i/icons/rss-safari.gif) right center no-repeat;
 
 /* title */
 div#title {
-/* change this image according to your mood or the holiday seasons (optional and can be removed) */
-background: #fff url(http://static.brajeshwar.com/wp-brajeshwar-8/moods/) right bottom no-repeat;
-}
-div#title {
 float: left;
 width: 680px;
 height: 100px !important;
-border-top: 1px solid #999;
-border-bottom: 1px solid #999;
+border-top: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
 margin: 6px 20px 0 0;
 overflow: hidden;
 }
@@ -182,8 +182,8 @@ margin-top: 6px;
 padding: 10px 0 0 0;
 height: 90px !important;
 overflow: hidden;
-border-top: 1px solid #999;
-border-bottom: 1px solid #999;
+border-top: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
 background: #fff url(i/ui/header-meta-bg.gif) repeat-x;
 }
 div#header-meta span.hd-meta-attribute {
@@ -227,6 +227,7 @@ width: 190px;
 div#content-primary {
 border-bottom: 1px solid #999;
 padding: 10px 0;
+margin-bottom: 20px;
 float: left;
 }
 
@@ -311,8 +312,7 @@ margin-top: -25px;
 width: 340px;
 background: transparent;
 }
-.post-ad-mid { float: right; width: 300px; margin: 10px; padding: 0; }
-.post-ad-mid:before { content: "Advertisements | Contact me to replace this with yours"; font-size: xx-small; color: #999; border-bottom: 1px solid #ccc; text-transform: lowercase; display: block; }
+.post-ad-mid { float: right; width: 300px; height: 250px; margin: 0 0 10px 10px; padding: 0; }
 .more-edit { margin: 20px 0; }
 .more-edit a { font-weight: bold; padding-right: 15px; background: url(i/icons/edit-pencil.gif) 100% 60% no-repeat; color: #008B00; }
 .more-edit a:hover { color: #00CD00; }
@@ -467,14 +467,14 @@ div#content-secondary span.srg_switcher a { text-decoration: none; }
 div#content-secondary span.srg_switcher a:hover, div#content-secondary span.srg_switcher a:focus { text-decoration: underline; }
 
 /* sigle post page */
-div#single { background: #fff url(i/ui/grid-vert.gif) repeat-y; padding: 20px 0; }
+div#single { margin-top: 20px; }
 div#single div#single-entry { float: left; width: 680px; margin-right: 20px; }
 div#single div#single-entry .entry { padding-left: 40px; }
 
 div#single div#social-activity { margin-top: 20px; color: #104e8b; }
 div#single div#social-activity a { color: #104e8b; }
 div#single div#social-activity a:hover { color: #1C86EE; }
-div#single div#single-entry-meta { float: left; width: 240px; padding-left: 20px; }
+div#single div#single-entry-meta { float: left; width: 260px; border-left: 1px solid #f0f0f0; padding-left: 10px; }
 div#single div#social-digg { float: right; margin-left: 20px; }
 div#single span.social-bookmark { padding-right: 20px; background: url(i/icons/arrow-01.gif) right center no-repeat; }
 div#single p.social-icons { padding-top: 6px; float: right; }
@@ -528,14 +528,9 @@ margin: 0;
 	
 /* comments
 \* ----------------------------------- ~o~ ----------------------------------- */
-div#comments-wrapper {
-background: #fff url(i/ui/grid-vert.gif) repeat-y;
-padding: 20px 0; 
-border-top: 1px solid #999;
-border-bottom: 1px solid #999;
-}
+div#comments-wrapper { padding: 20px 0; border-top: 1px solid #999; margin-top: 5px; }
 div#comments-main { float: left; width: 650px; margin-right: 50px; }
-div#comments-meta { float: left; width: 240px; padding-left: 20px; }
+div#comments-meta { float: left; width: 270px; border-left: 1px solid #f0f0f0; padding-left: 10px; }
 
 div#comments-body {}
 div#comments-body h3, div#commentsform-envelop h3
@@ -570,12 +565,34 @@ form#commentform p { padding: 4px 0; }
 
 /* footer
 \* ----------------------------------- ~o~ ----------------------------------- */
-/* footer-top */
-div#footer-top {
+/* ad-icon */
+div#ad-icon {
 width: 1000px;
 background: #fff url(i/ui/pattern-bg.gif) left bottom repeat-x;
-margin: 20px auto 1px auto;
+height: 40px;
+margin: 10px auto 1px auto;
+padding-top: 20px;
+text-align: left;
+clear: both;
 }
+div#ad-icon ul { 
+float:left;
+padding: 0;
+margin: 0;
+list-style-type: none;
+}
+div#ad-icon li {
+float: left;
+margin: 0 5px 0 0;
+padding: 0;
+}
+div#ad-icon img, div#ad-icon a img {
+display: block;
+text-decoration: none;
+border: 0 none;
+height: 16px; width: 16px;
+}
+div#ad-icon ul li.ad-icon-here { padding-left: 15px; margin-left: 20px; background: url(i/icons/arrow-left-01.gif) left center no-repeat; }
 
 /* footer */
 div#footer-wrapper { text-align: center; background: #1b2424; }
@@ -656,8 +673,8 @@ height: 80px !important;
 padding: 0; margin: 0;
 }
 
-/* footer-btm */
-div#footer-btm {
+/* copyright */
+div#copyright {
 width: 1000px;
 margin: 1px auto 0 auto;
 padding: 30px 0;
@@ -665,17 +682,3 @@ text-align: left;
 background: #fff url(i/ui/pattern-bg.gif) left top repeat-x;
 font: normal normal normal 0.90em/normal Corbel, Verdana, "Bitstream Vera Sans", sans-serif;
 }
-
-/* clear */
-.clear:after {
-content: "."; 
-display: block; 
-height: 0; 
-clear: both; 
-visibility: hidden;
-}
-.clear {display: inline-table;}
-/* Hides from IE-mac \*/
-* html .clear {height: 1%;}
-.clear {display: block;}
-/* End hide from IE-mac */
