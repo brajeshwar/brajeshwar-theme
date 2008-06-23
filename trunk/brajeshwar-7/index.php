@@ -12,7 +12,7 @@ foreach($posts as $post) : setup_postdata($post);
 <p class="post-meta"><?php the_time('F jS, Y') ?> / <?php the_category(', ') ?> / <?php comments_popup_link('No comments', '1 comment', '% comments','Comments are off for this post'); ?><?php edit_post_link('Edit&hellip;', ' / ', ''); ?></p>
 <div class="post-body">
 <?php the_excerpt(); ?>
-<p class="more"><a href="<?php the_permalink() ?>" title="<?php the_title(); ?>">&#x21E5; Read the article in full</a></p>
+<p class="more"><a href="<?php the_permalink() ?>" title="<?php the_title(); ?>">&mdash; Read the article in full</a></p>
 </div>
 </div>
 <?php endforeach; ?>
@@ -20,7 +20,7 @@ foreach($posts as $post) : setup_postdata($post);
 <div id="sec-about">
 <h3 class="sec-title">About</h3>
 <p><?php bloginfo('description'); ?></p>
-<p class="more"><a href="<?php bloginfo('url'); ?>/about/" title="Read More">Read More &nbsp; &#x238B;</a></p>
+<p class="more"><a href="<?php bloginfo('url'); ?>/about/" title="Read More">Read More &nbsp; ...</a></p>
 </div>
 
 <div class="clear"></div>
@@ -30,17 +30,15 @@ foreach($posts as $post) : setup_postdata($post);
 <!-- START #ads -->
 <div id="ads-home">
 <script type="text/javascript"><!--
-google_ad_client = "<?php ragnu('ad_client'); ?>";
+google_ad_client = "pub-4468481779445136";
+/* braj-theme-728x90 */
+google_ad_slot = "9945173142";
 google_ad_width = 728;
 google_ad_height = 90;
-google_ad_format = "728x90_as";
-google_ad_type = "text_image";
-//2007-03-29: brajeshwar-theme
-google_ad_channel = "<?php ragnu('ad_channel'); ?>";
 //-->
 </script>
 <script type="text/javascript"
-  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </script>
 </div>
 <!-- END #ads -->
@@ -65,7 +63,7 @@ foreach($posts as $post) : setup_postdata($post);
 <h2 class="post-title"><a href="<?php the_permalink() ?>" title="Permanent link to <?php the_title(); ?>"><?php the_title(); ?></a></h2>
 <p class="post-meta"><?php the_time('F jS, Y') ?> / <?php the_category(', ') ?> / <?php comments_popup_link('No comments', '1 comment', '% comments','Comments are off for this post'); ?><?php edit_post_link('e &hellip;', ' / ', ''); ?></p>
 <div class="post-body">
-<?php the_content('&#x21E5; Continue reading'); ?>
+<?php the_content('&mdash; Continue reading'); ?>
 </div>
 </div>
 <?php endforeach; ?>

@@ -16,17 +16,15 @@
 
 <!-- START #ads -->
 <script type="text/javascript"><!--
-google_ad_client = "<?php ragnu('ad_client'); ?>";
+google_ad_client = "pub-4468481779445136";
+/* braj-theme-336x280 */
+google_ad_slot = "3813019400";
 google_ad_width = 336;
 google_ad_height = 280;
-google_ad_format = "336x280_as";
-google_ad_type = "text_image";
-//2007-03-29: brajeshwar-theme
-google_ad_channel = "<?php ragnu('ad_channel'); ?>";
 //-->
 </script>
 <script type="text/javascript"
-  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </script>
 <!-- END #ads -->
 

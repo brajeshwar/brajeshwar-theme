@@ -6,7 +6,7 @@
 <title><?php wp_title(' '); ?><?php if(wp_title(' ', false)) { echo ' - '; } ?><?php bloginfo('name'); ?></title>
 
 <!-- metas -->
-<meta name="keywords" content="<?php ragnu('keywords'); ?>" />
+<meta name="keywords" content="Wordpress, Design, Theme" />
 <meta name="Description" content="<?php bloginfo('description'); ?>" />
 <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
 

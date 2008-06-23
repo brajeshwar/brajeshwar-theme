@@ -1,5 +1,5 @@
 Brajeshwar
-http://theme.brajeshwar.com/
+http://theme.brajeshwar.com
 __________________________________________________________________________________
 INSTALL
 
